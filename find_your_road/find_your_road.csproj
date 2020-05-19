@@ -59,6 +59,8 @@
   <ItemGroup>
     <Content Include="css\form.css" />
     <Content Include="css\main.css" />
+    <Content Include="imgs\bg.jpg" />
+    <Content Include="imgs\path.jpg" />
     <Content Include="Sign In.aspx" />
     <Content Include="Singn Up.aspx" />
     <Content Include="Web.config" />
@@ -97,7 +99,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="imgs\" />
     <Folder Include="js\" />
   </ItemGroup>
   <PropertyGroup>

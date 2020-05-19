@@ -7,12 +7,20 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h2>Sing Up</h2>
     <div class="field">
+        <input type="name" name="name" class="input" placeholder="Nom" required/>
+    </div>
+
+    <div class="field">
         <input type="email" name="email" class="input" placeholder="Email" required />
     </div>
     
     <div class="field">
         <input type="password" name="password" class="input" placeholder="Mot de pass" required/>
     </div>
+    
+    <div class="field">
+        <input type="password" name="password" class="input" placeholder="Confirmez le mot de passe" required/>
+    </div>
     <br />
-    <button type="submit">sing in</button>
+    <button type="submit">sing up</button>
 </asp:Content>
