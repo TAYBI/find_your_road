@@ -59,10 +59,14 @@
   <ItemGroup>
     <Content Include="css\form.css" />
     <Content Include="css\main.css" />
+    <Content Include="css\user_profile.css" />
+    <Content Include="imgs\avatar.jpg" />
     <Content Include="imgs\bg.jpg" />
     <Content Include="imgs\path.jpg" />
+    <Content Include="js\index.js" />
     <Content Include="Sign In.aspx" />
     <Content Include="Singn Up.aspx" />
+    <Content Include="UserInfo.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +92,13 @@
     <Compile Include="Singn Up.aspx.designer.cs">
       <DependentUpon>Singn Up.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserInfo.aspx.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInfo.aspx.designer.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="LoginSingnUp.Master" />
@@ -98,9 +109,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="js\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
