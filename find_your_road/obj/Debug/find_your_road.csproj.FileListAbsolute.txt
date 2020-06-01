@@ -3,3 +3,8 @@ C:\Users\Bilal\Desktop\find_your_road\find_your_road\bin\find_your_road.pdb
 C:\Users\Bilal\Desktop\find_your_road\find_your_road\obj\Debug\find_your_road.csprojResolveAssemblyReference.cache
 C:\Users\Bilal\Desktop\find_your_road\find_your_road\obj\Debug\find_your_road.dll
 C:\Users\Bilal\Desktop\find_your_road\find_your_road\obj\Debug\find_your_road.pdb
+C:\Users\Bilal\Desktop\find_your_road-master\find_your_road\bin\find_your_road.dll
+C:\Users\Bilal\Desktop\find_your_road-master\find_your_road\bin\find_your_road.pdb
+C:\Users\Bilal\Desktop\find_your_road-master\find_your_road\obj\Debug\find_your_road.csprojResolveAssemblyReference.cache
+C:\Users\Bilal\Desktop\find_your_road-master\find_your_road\obj\Debug\find_your_road.dll
+C:\Users\Bilal\Desktop\find_your_road-master\find_your_road\obj\Debug\find_your_road.pdb
