@@ -13,3 +13,79 @@ html {
   max-width: 1024px;
   margin: 0 auto;
 }
+
+/*----------------------*/
+
+.field {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    border-bottom: 1px solid #afafaf;
+    margin: 2rem auto 1rem;
+    transition: 500ms;
+ }
+  .input {
+    outline: none;
+    border: none;
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+    padding: 0.25rem 0;
+    background: none;
+    color: white;
+    font-size: 1.1em;
+    transition: border 500ms;
+  }
+  .input:valid {
+    color: #2ebc4f;
+  }
+  .input:invalid {
+    color: orangered;
+  }
+  .field::after {
+    content: "";
+    position: relative;
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #2ebc4f;
+    transform: scaleX(0);
+    transform-origin: 100%;
+    opacity: 0;
+    transition: all 500ms ease;
+    top: 2px;
+  }
+  .field:focus-within {
+    border-color: transparent;
+  }
+  .field:focus-within::after {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+
+::-webkit-input-placeholder { 
+  color: #afafaf;
+}
+
+:-ms-input-placeholder { 
+  color: #afafaf;
+}
+
+::placeholder {
+  color: #afafaf;
+}
+
+
+.button {
+    padding: 0.7rem 1.5rem;
+    text-decoration: none;
+    transition: all ease-in 0.3s;
+    color: #FFFFFF;
+    text-align:end;
+    background: #2ebc4f;
+    border :none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all ease-in 0.3s;
+}

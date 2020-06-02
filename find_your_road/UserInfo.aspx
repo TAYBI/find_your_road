@@ -11,6 +11,8 @@
     <title>Document</title>
 </head>
 <body>
+<form id="Form1" runat="server">
+
  <header>
       <div class="container">
         <div class="user_info">
@@ -49,24 +51,30 @@
       <div class="container">
         <h2>Informations sur le profil</h2>
         <hr />
-        <p>name</p>
-        <input type="text" value="Lorem, ipsum" />
-        <p>bio</p>
-        <textarea name="bio" value="" id="" cols="50" rows="5">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic error labore fuga nobis. Non fuga ipsa sit nulla atque? Ipsa eos atque quaedolore eligendi harum ratione voluptatum aliquid consequuntur?</textarea
-        >
-        <br />
-        <button type="submit">mettre à jour le profil</button>
+            <p>name</p>  
+            <div class="field">
+                 <asp:TextBox ID="TextBox1" type="text" name="email" class="input" Text="Lorem, ipsum" placeholder="Email" runat="server" required></asp:TextBox>
+            </div>
+            <p>bio</p>
+            <textarea name="bio" value="" id="" cols="50" rows="5">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic error labore fuga nobis. Non fuga ipsa sit nulla atque? Ipsa eos atque quaedolore eligendi harum ratione voluptatum aliquid consequuntur?</textarea
+            >
+            <br />
+            <asp:Button class="button"  ID="Button2" runat="server" Text="mettre à jour le profil" />
         <h2>Changer le mot de passe</h2>
         <hr />
-        <p>Ancien mot de passe</p>
-        <input type="password" />
-        <p>Nouveau mot de passe</p>
-        <input type="password" />
-        <p>Confirmer le nouveau mot de passe</p>
-        <input type="password" />
-        <br />
-        <button type="submit">mettre à jour le mot de passe</button>
+            <p>Ancien mot de passe</p>
+            <div class="field">
+                 <asp:TextBox ID="TextBox2" type="password" name="email" class="input" placeholder="Email" runat="server" required></asp:TextBox>
+            </div>
+            <p>Nouveau mot de passe</p>
+            <div class="field">
+                 <asp:TextBox ID="TextBox3" type="password" name="email" class="input" placeholder="Email" runat="server" required></asp:TextBox>
+            </div>
+            <p>Confirmer le nouveau mot de passe</p>
+                 <asp:TextBox ID="TextBox4" type="password" name="email" class="input" placeholder="Email" runat="server" required></asp:TextBox>
+            <br />
+            <asp:Button class="button" ID="Button1" runat="server" Text="mettre à jour le mot de passe" />
       </div>
     </div>
 
@@ -85,5 +93,6 @@
     </div>
 
     <script src="js/index.js" lang="javascript" type="text/javascript" ></script>
+</form>
 </body>
 </html>
