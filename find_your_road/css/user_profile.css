@@ -58,3 +58,56 @@ header {
   border-bottom: none;
 }
 
+.field {
+    width: 300px;
+    position: relative;
+    border-bottom: 1px solid #afafaf;
+    margin: 2rem 0 1rem;
+    transition: 500ms;
+ }
+
+.name_field{
+    margin: 0rem 0 1rem;
+    transition: 500ms;
+ }
+
+.bio_field{
+    width: 450px;
+    margin: 0rem 0 1rem;
+    transition: 500ms;
+ }
+textarea {
+    font-family:  'Montserrat', sans-serif;
+}
+
+#profile p {
+ font-weight: bold;
+}
+
+#profile h2{
+ font-size: 2rem;
+ border-bottom: solid 1px #000;
+}
+
+#profile h2:first-child{
+ margin-bottom: 2rem;
+}
+
+.button {
+    padding: 0.7rem 1rem;
+    text-decoration: none;
+    transition: all ease-in 0.3s;
+    color: #FFFFFF;
+    text-align:end;
+    background: #2ebc4f;
+    border :none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: .9rem;
+    transition: all ease-in 0.3s;
+}
+
+.danger {
+    margin: 2rem 0;
+    background: #d72a31;
+}

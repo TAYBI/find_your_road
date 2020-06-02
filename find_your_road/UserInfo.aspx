@@ -49,32 +49,29 @@
 
     <div id="profile" class="tabcontent">
       <div class="container">
-        <h2>Informations sur le profil</h2>
-        <hr />
+        <h2><br/>Informations sur le profil</h2>
             <p>name</p>  
-            <div class="field">
-                 <asp:TextBox ID="TextBox1" type="text" name="email" class="input" Text="Lorem, ipsum" placeholder="Email" runat="server" required></asp:TextBox>
+            <div class="field name_field">
+                    <asp:TextBox ID="TextBox1" type="text" name="email" class="input" Text="Lorem, ipsum" placeholder="Email" runat="server" required></asp:TextBox>
             </div>
             <p>bio</p>
-            <textarea name="bio" value="" id="" cols="50" rows="5">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic error labore fuga nobis. Non fuga ipsa sit nulla atque? Ipsa eos atque quaedolore eligendi harum ratione voluptatum aliquid consequuntur?</textarea
-            >
-            <br />
+            <div class="field bio_field">
+                <textarea name="bio" class="input" id="" cols="50" rows="5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic error labore fuga nobis. Non fuga ipsa sit nulla atque? Ipsa eos atque quaedolore eligendi harum ratione voluptatum aliquid consequuntur?</textarea>
+            </div>
             <asp:Button class="button"  ID="Button2" runat="server" Text="mettre à jour le profil" />
-        <h2>Changer le mot de passe</h2>
-        <hr />
-            <p>Ancien mot de passe</p>
+        <h2><br/>Changer le mot de passe</h2>
             <div class="field">
-                 <asp:TextBox ID="TextBox2" type="password" name="email" class="input" placeholder="Email" runat="server" required></asp:TextBox>
+                    <asp:TextBox ID="TextBox2" type="password" class="input" placeholder="Ancien mot de passe" runat="server" ></asp:TextBox>
             </div>
-            <p>Nouveau mot de passe</p>
             <div class="field">
-                 <asp:TextBox ID="TextBox3" type="password" name="email" class="input" placeholder="Email" runat="server" required></asp:TextBox>
+                    <asp:TextBox ID="TextBox3" type="password" class="input" placeholder="Nouveau mot de passe" runat="server" ></asp:TextBox>
             </div>
-            <p>Confirmer le nouveau mot de passe</p>
-                 <asp:TextBox ID="TextBox4" type="password" name="email" class="input" placeholder="Email" runat="server" required></asp:TextBox>
-            <br />
+            <div class="field">
+                    <asp:TextBox ID="TextBox4" type="password" class="input" placeholder="Confirmer le nouveau mot de passe" runat="server" ></asp:TextBox>
+            </div>
             <asp:Button class="button" ID="Button1" runat="server" Text="mettre à jour le mot de passe" />
+        <h2><br />Zone dangereuse</h2>
+            <asp:Button class="button danger" ID="Button3" runat="server" Text="supprimer mon compte" />
       </div>
     </div>
 
