@@ -76,16 +76,60 @@
     </div>
 
     <div id="my_posts" class="tabcontent">
-      <div class="container">
-        <h3>My posts</h3>
-        <p>My posts is the capital of France.</p>
+    <div class="box"></div>
+        <div class="container">
+          <div class="filter">
+            <label for="cars">Choose a type:</label>
+            <select name="option" id="option">
+              <option value="web">web</option>
+              <option value="design">design</option>
+              <option value="server side">server side</option>
+              <option value="mobile">mobile</option>
+            </select>
+           </div>
+        <div class="grid">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+          <div>7</div>
+          <div>8</div>
+          <div>8</div>
+          <div>8</div>
+          <div>8</div>
+          <div>8</div>
+        </div>
       </div>
     </div>
 
     <div id="posts_I_Liked" class="tabcontent">
-      <div class="container">
-        <h3>Posts I Liked</h3>
-        <p>Posts I Liked is the capital of Japan.</p>
+      <div class="box"></div>
+        <div class="container">
+          <div class="filter">
+            <label for="cars">Choose a type:</label>
+            <select name="option" id="Select1">
+              <option value="web">web</option>
+              <option value="design">design</option>
+              <option value="server side">server side</option>
+              <option value="mobile">mobile</option>
+            </select>
+           </div>
+        <div class="grid">
+          <div>8</div>
+          <div>8</div>
+          <div>8</div>
+          <div>8</div>
+          <div>8</div>
+          <div>8</div>
+          <div>8</div>
+          <div>8</div>
+          <div>8</div>
+          <div>8</div>
+          <div>8</div>
+          <div>8</div>
+        </div>
       </div>
     </div>
 

@@ -58,11 +58,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\form.css" />
+    <Content Include="css\home.css" />
     <Content Include="css\main.css" />
     <Content Include="css\user_profile.css" />
+    <Content Include="Home.aspx" />
     <Content Include="imgs\avatar.jpg" />
     <Content Include="imgs\bg.jpg" />
     <Content Include="imgs\path.jpg" />
+    <Content Include="js\home.js" />
     <Content Include="js\index.js" />
     <Content Include="Sign In.aspx" />
     <Content Include="Singn Up.aspx" />
@@ -70,6 +73,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="LoginSingnUp.Master.cs">
       <DependentUpon>LoginSingnUp.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

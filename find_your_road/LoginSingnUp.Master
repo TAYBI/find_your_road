@@ -17,10 +17,10 @@
     <link rel="stylesheet" href="css/form.css">
 </head>
 <body>
-    <div class="SignInUpLinks">
+    <nav>
          <a href="Sign In.aspx">Sign In</a>
          <a href="Singn Up.aspx">Sign Up</a>
-    </div>
+    </nav>
     <div class="formContainer">    
         <form id="form1" runat="server">
         <div>

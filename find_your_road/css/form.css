@@ -1,24 +1,5 @@
-﻿.SignInUpLinks{
-    padding: 1rem 2rem;
-    width: 100%;
-    background: rgb(0, 0, 0, 0.3);
-    color: #fff;
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    position:fixed;
-    box-shadow: 4px 8px 22px -22px rgba(128, 128, 128, 0.45);
-}
-.SignInUpLinks a{
-    padding: 0.7rem 1.5rem;
-    text-decoration: none;
-    color: #fff;
-    transition: all ease-in 0.3s;
-    color: #FFFFFF;
-    /*text-shadow: 0 0 10px #FFFFFF;*/
-}
-.SignInUpLinks a+a{
+﻿
+nav a+a{
     text-align:end;
     background: #2ebc4f;
     border-radius: 25px;
