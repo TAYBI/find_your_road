@@ -17,7 +17,7 @@
         <div class="dropdown-content">
           <a href="UserInfo.aspx">profile</a>
           <a href="#">new post</a>
-          <a href="#">log out</a>
+          <a href="Sign In.aspx">log out</a>
         </div>
       </div>
     </nav>
