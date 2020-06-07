@@ -12,12 +12,14 @@
     <form id="form1" runat="server">
     <nav>
       <a href="#" class="new_post">+ new post</a>
-      <img src="imgs/avatar.jpg" width="55" height="55" />
-      <ul class="dropdown-content hidden img">
-        <li><a href="medlemmer.html">profile</a></li>
-        <li><a href="#">new post</a></li>
-        <li><a href="#">log out</a></li>
-      </ul>
+      <div class="dropdown">
+        <img src="imgs/avatar.jpg" alt="avatar" width="55" height="55" class="dropbtn img" />
+        <div class="dropdown-content">
+          <a href="UserInfo.aspx">profile</a>
+          <a href="#">new post</a>
+          <a href="#">log out</a>
+        </div>
+      </div>
     </nav>
     <main>
     <div class="box"></div>
@@ -32,54 +34,58 @@
               <option value="mobile">mobile</option>
             </select>
         <div class="grid">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
-          <div>7</div>
-          <div>8</div>
-          <div>8</div>
-          <div>8</div>
-          <div>8</div>
-          <div>8</div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
         </div>
       </div>
+    </div>
     </main>
-
-        <div class="dropdown">
-  <button class="myFunction" class="dropbtn">Dropdown</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </div>
-</div>
     </form>
-    <%--<script src="js/home.js"></script>
-    <script>
-        /* When the user clicks on the button, 
-        toggle between hiding and showing the dropdown content */
-        var btn = document.getElementsByClassName("myFunction");
-        btn.addEventListener("click", function (event) {
-            event.preventDefault();
-            document.getElementById("myDropdown").classList.toggle("show");
-        });
-
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function (event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-</script>--%>
 </body>
 </html>

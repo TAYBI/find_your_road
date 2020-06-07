@@ -77,6 +77,11 @@ header {
  }
 textarea {
     font-family:  'Montserrat', sans-serif;
+    color: #333 !important;
+}
+
+input[type="text"] {
+    color: #333 !important;
 }
 
 #profile p {
@@ -84,7 +89,7 @@ textarea {
 }
 
 #profile h2{
- font-size: 2rem;
+ /*font-size: 2rem;*/
  border-bottom: solid 1px #000;
 }
 
@@ -107,10 +112,31 @@ textarea {
 }
 
 .danger {
-    margin: 2rem 0;
+    margin-top: 2rem;
     background: #d72a31;
 }
 
 .box {
     height : 4rem;
+}
+
+
+/*-------------------*/
+
+
+.home_link {
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    background: #333;
+    color: white;
+    position: fixed;
+    border-radius: 25px;
+    right: 2rem;
+    top: 0.7rem;
+    transition: all ease-in 0.3s;
+    box-shadow: 4px 8px 22px -22px rgba(128, 128, 128, 0.45);
+}
+
+.home_link:hover {
+    opacity: 0.8;
 }

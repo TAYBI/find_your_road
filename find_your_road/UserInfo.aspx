@@ -12,7 +12,7 @@
 </head>
 <body>
 <form id="Form1" runat="server">
-
+  <a  class="home_link" href="Home.aspx">Home</a>
  <header>
       <div class="container">
         <div class="user_info">
@@ -88,18 +88,54 @@
             </select>
            </div>
         <div class="grid">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
-          <div>7</div>
-          <div>8</div>
-          <div>8</div>
-          <div>8</div>
-          <div>8</div>
-          <div>8</div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
         </div>
       </div>
     </div>
@@ -117,22 +153,131 @@
             </select>
            </div>
         <div class="grid">
-          <div>8</div>
-          <div>8</div>
-          <div>8</div>
-          <div>8</div>
-          <div>8</div>
-          <div>8</div>
-          <div>8</div>
-          <div>8</div>
-          <div>8</div>
-          <div>8</div>
-          <div>8</div>
-          <div>8</div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
+          <div class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </div>
         </div>
       </div>
     </div>
-
+    
+    <div class="box"></div>
     <script src="js/index.js" lang="javascript" type="text/javascript" ></script>
 </form>
 </body>

@@ -1,38 +1,85 @@
 ﻿nav {
-background: #333;
-}
-
-nav a {
-  padding: 0.7rem 2rem;
-  text-decoration: none;
+  padding: 1rem 2rem;
+  width: 100%;
+  background: #333333;
   color: #fff;
-  transition: all ease-in 0.3s;
-  color: #fff;
-  /*text-shadow: 0 0 10px #FFFFFF;*/
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: fixed;
+  box-shadow: 4px 8px 22px -22px rgba(128, 128, 128, 0.45);
 }
 
 nav img {
-  cursor: pointer;
-  border-radius: 5px;
+  border: 0rem solid beige;
+  border-radius: 20px;
   transition: all ease-in 0.3s;
+  padding-top: 0.2rem;
+    margin-right: 1.5rem;
 }
 
-nav a:hover,
-nav img:hover {
-  opacity: 0.7;
+nav a {
+  padding: 0.5rem 1.4rem;
+  margin: 1rem;
+  text-decoration: none;
+  border: solid 0.1px white;
+  transition: all ease-in 0.3s;
+  color: #fff;
+  border-radius: 20px;
+  /*text-shadow: 0 0 10px #FFFFFF;*/
 }
 
-nav ul,
-nav .hidden {
-  visibility: hidden;
+.new_post {
+    background: none;
+    margin-right: 1.5rem;
+}
+
+.new_post:hover {
+  background-color: #000000;
+}
+
+.dropbtn {
+  color: white;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
   position: absolute;
-  background-color: black;
-  top: 5rem;
-  right: 1.2rem;
-  transition: all ease-in 0.3s;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  right: 1.9rem;
 }
 
-nav img:hover ul
-nav .visible {
-  visibility: visible;
+.dropdown-content a {
+  color: black;
+  margin: 0;
+  text-decoration: none;
+  display: block;
 }
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  opacity: 0.9;
+}
+
+main {
+    color: black;
+}
+
+/*------------------*/
