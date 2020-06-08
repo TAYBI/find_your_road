@@ -60,13 +60,15 @@
     <Content Include="css\form.css" />
     <Content Include="css\home.css" />
     <Content Include="css\main.css" />
+    <Content Include="css\simplemd.min.css" />
     <Content Include="css\user_profile.css" />
     <Content Include="Home.aspx" />
     <Content Include="imgs\avatar.jpg" />
     <Content Include="imgs\bg.jpg" />
     <Content Include="imgs\path.jpg" />
-    <Content Include="js\home.js" />
+    <Content Include="js\simplemd.min.js" />
     <Content Include="js\index.js" />
+    <Content Include="PostEditor.aspx" />
     <Content Include="Sign In.aspx" />
     <Content Include="Singn Up.aspx" />
     <Content Include="UserInfo.aspx" />
@@ -86,6 +88,13 @@
     </Compile>
     <Compile Include="LoginSingnUp.Master.designer.cs">
       <DependentUpon>LoginSingnUp.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PostEditor.aspx.cs">
+      <DependentUpon>PostEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostEditor.aspx.designer.cs">
+      <DependentUpon>PostEditor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sign In.aspx.cs">

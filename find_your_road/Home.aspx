@@ -11,12 +11,12 @@
 <body class="dropbtn">
     <form id="form1" runat="server">
     <nav>
-      <a href="#" class="new_post">+ new post</a>
+      <a href="PostEditor.aspx" class="new_post">+ new post</a>
       <div class="dropdown">
         <img src="imgs/avatar.jpg" alt="avatar" width="55" height="55" class="dropbtn img" />
         <div class="dropdown-content">
           <a href="UserInfo.aspx">profile</a>
-          <a href="#">new post</a>
+          <a href="PostEditor.aspx">new post</a>
           <a href="Sign In.aspx">log out</a>
         </div>
       </div>
