@@ -1,0 +1,154 @@
+﻿body {
+    font-family:  'Montserrat', sans-serif;
+}
+
+.name_field{
+    margin: 0rem 0 1rem;
+    transition: 500ms;
+    }
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.bio_field{
+    margin: 0rem 0 1rem;
+    transition: 500ms;
+    }
+
+
+
+
+
+.field {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    border-bottom: 1px solid #afafaf;
+    margin: 1rem auto 1rem;
+    transition: 500ms;
+ }
+  .input {
+    outline: none;
+    border: none;
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+    padding: 0.25rem 0;
+    background: none;
+    color: white;
+    font-size: 1.1em;
+    transition: border 500ms;
+  }
+  .input:valid {
+    color: #2ebc4f;
+  }
+  .input:invalid {
+    color: orangered;
+  }
+  .field::after {
+    content: "";
+    position: relative;
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #2ebc4f;
+    transform: scaleX(0);
+    transform-origin: 100%;
+    opacity: 0;
+    transition: all 500ms ease;
+    top: 2px;
+  }
+  .field:focus-within {
+    border-color: transparent;
+  }
+  .field:focus-within::after {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+
+::-webkit-input-placeholder { 
+  color: #afafaf;
+}
+
+:-ms-input-placeholder { 
+  color: #afafaf;
+}
+
+::placeholder {
+  color: #afafaf;
+}
+
+
+
+
+
+
+
+
+
+
+textarea{
+    font-family:  'Montserrat', sans-serif;
+    color: #333 !important;
+}
+
+select,
+option {
+    border: 1px solid #000;
+    margin-left: 0.4rem;
+    border-radius: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.5rem 1rem;
+}
+
+input[type="text"] {
+    color: #333 !important;
+}
+.home_link {
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    background: #333;
+    color: white;
+    position: fixed;
+    border-radius: 25px;
+    right: 2rem;
+    top: 0.7rem;
+    transition: all ease-in 0.3s;
+    box-shadow: 4px 8px 22px -22px rgba(128, 128, 128, 0.45);
+}
+
+.home_link:hover {
+    opacity: 0.8;
+}
+.button {
+    padding: 0.7rem 1rem;
+    text-decoration: none;
+    transition: all ease-in 0.3s;
+    color: #FFFFFF;
+    text-align:end;
+    background: #444;
+    border :none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: .9rem;
+    transition: all ease-in 0.3s;
+}
+.btnGreen {
+    background: #2ebc4f;
+}
+#h1 {
+    text-align: center;
+    margin: 4rem auto 0rem;
+}
+hr {
+    margin-bottom: 4rem;
+}
+.filter {
+    text-align: left;
+}
+
+.box {
+    height: 4rem;
+}

@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\edit_post.css" />
     <Content Include="css\form.css" />
     <Content Include="css\home.css" />
     <Content Include="css\main.css" />
