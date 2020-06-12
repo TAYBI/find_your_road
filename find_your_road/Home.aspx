@@ -34,54 +34,54 @@
               <option value="mobile">mobile</option>
             </select>
         <div class="grid">
+          <a href="UserInfo.aspx" class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </a>
+          <a class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </a>
+          <a class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </a>
           <div class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
           </div>
+          <a class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </a>
+          <a class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </a>
+          <a class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </a>
+          <a class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </a>
           <div class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
           </div>
-          <div class="card">
+          <a class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </a>
+          <a class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </a>
+          <a class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
+          </a>
         </div>
       </div>
     </div>
