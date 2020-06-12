@@ -88,54 +88,90 @@
             </select>
            </div>
         <div class="grid">
-          <div class="card">
+          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink20" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink1" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink2" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink3" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink4" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink5" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink6" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink7" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink8" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink9" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink10" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink11" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
+          </asp:HyperLink>
+          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink12" runat="server" class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </asp:HyperLink>
+          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink13" runat="server" class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </asp:HyperLink>
+          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink14" runat="server" class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </asp:HyperLink>
+          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink15" runat="server" class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </asp:HyperLink>
+          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink16" runat="server" class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </asp:HyperLink>
+          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink17" runat="server" class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </asp:HyperLink>
+          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink18" runat="server" class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </asp:HyperLink>
+          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink19" runat="server" class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </asp:HyperLink>
+          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink21" runat="server" class="card">
+            <h4><b>Lorem, ipsum.</b></h4> 
+            <p>Lorem ipsum dolor sit amet.</p> 
+          </asp:HyperLink>        
         </div>
       </div>
     </div>
@@ -153,126 +189,90 @@
             </select>
            </div>
         <div class="grid">
-          <div class="card">
+            <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink22" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink23" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink24" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink25" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink26" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink27" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink28" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink29" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink30" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink31" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink32" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink33" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink34" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink35" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink36" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink37" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink38" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink39" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink40" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink41" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
+          </asp:HyperLink>
+            <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink42" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
-          <div class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </div>
+          </asp:HyperLink>
         </div>
       </div>
     </div>
