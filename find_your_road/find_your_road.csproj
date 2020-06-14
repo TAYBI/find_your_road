@@ -67,6 +67,7 @@
     <Content Include="imgs\avatar.jpg" />
     <Content Include="imgs\bg.jpg" />
     <Content Include="imgs\path.jpg" />
+    <Content Include="js\mdtohtml.min.js" />
     <Content Include="js\simplemd.min.js" />
     <Content Include="js\index.js" />
     <Content Include="PostEditor.aspx" />
