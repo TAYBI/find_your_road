@@ -56,6 +56,11 @@
     <script src="js/simplemd.min.js"></script>
     <script>
         var simplemde = new SimpleMDE({ element: document.getElementById("markdown") });
+        var btn = document.querySelector("#Button2");
+        btn.addEventListener("click", function (e) {
+            e.preventDefault();
+            console.log(simplemde.value() == "")
+        })
     </script>
 </body>
 </html>
