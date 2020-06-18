@@ -24,14 +24,15 @@
       <div class="container">
         <div class="user_info">
           <div class="avatar">
-            <img src="imgs/avatar.jpg" width="150" height="150" />
+            <%--<img src="imgs/avatar.jpg" width="150" height="150" />--%>
+            <asp:ImageButton ID="User_Avatar" ImageUrl="~/imgs/avatar.jpg" runat="server" Height="150px" Width="150px" />
           </div>
           <div class="user_personel_info">
            <asp:Label ID="User_name" class="user_name" runat="server" Text="Lorem, ipsum"></asp:Label>
            <asp:Label ID="User_bio" class="user_bio" runat="server" Text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic error labore fuga nobis. Non fuga ipsa sit nulla atque? Ipsa eos atque quae dolore eligendi harum ratione voluptatum aliquid consequuntur?"></asp:Label>
-            <%--<h2 class="user_name">.</h2>--%>
+              <%--<h2 class="user_name">.</h2>--%>
             <!-- <h3 class="user_email">example@example.com</h3> -->
-            <%--<p class="user_bio">
+              <%--<p class="user_bio">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic error
               labore fuga nobis. Non fuga ipsa sit nulla atque? Ipsa eos atque
               quae dolore eligendi harum ratione voluptatum aliquid

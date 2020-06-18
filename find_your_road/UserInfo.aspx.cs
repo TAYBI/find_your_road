@@ -17,13 +17,17 @@ namespace find_your_road
         {
             if (!IsPostBack)
             {
-                if (Session["User"] != null)
+                if (Session["User"] == null)
+                    Response.Redirect("Sign In.aspx");
+                else
+                {
                     user = (User)Session["User"];
-
-                User_name.Text = user.getName();
-                Input_Name.Text = user.getName();
-                User_bio.Text = user.getBio();
-                bio = user.getBio();
+                    Page.Title = "Profile | " + user.getName();
+                    User_name.Text = user.getName();
+                    Input_Name.Text = user.getName();
+                    User_bio.Text = user.getBio();
+                    bio = user.getBio();
+                }
             }
         }
         protected string User_Bio_Input { get { return bio; } }
