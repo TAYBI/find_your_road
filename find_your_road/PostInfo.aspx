@@ -62,22 +62,22 @@
         });
         var container = document.querySelector(".container");
 
-        var md_ = `# Project Title
+//        var md_ = `# Project Title
 
-One Paragraph of project description goes here 
+//One Paragraph of project description goes here 
 
-## Getting Started
+//## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+//These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
+//### Prerequisites
 
-What things you need to install the software and how to install them`; 
+//What things you need to install the software and how to install them`; 
         //"<%
         //= html() %>";
 
         document.getElementById('<%=hdn.ClientID%>').value = "assign your javascript variable value here";
-        var html = md.render(md_)
+        var html = md.render("# lorem lorem     ")
         container.innerHTML = html;
     </script>
 </body>

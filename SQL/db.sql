@@ -6,6 +6,7 @@ CREATE TABLE User_ (
 	Name VARCHAR(50),
 	Email VARCHAR(50),
 	Password NVARCHAR(50),
+	Bio VARCHAR(MAX),
 	Avatar IMAGE
 )
 
@@ -21,4 +22,4 @@ CREATE TABLE Post (
 CREATE TABLE Post_Liked(
 	PostId NVARCHAR(100) FOREIGN KEY REFERENCES Post(PostId),
 	UserId NVARCHAR(100) FOREIGN KEY REFERENCES User_(UserId)
-)
+) 

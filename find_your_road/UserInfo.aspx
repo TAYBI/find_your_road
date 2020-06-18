@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/user_profile.css" />
     <title>Document</title>
+    <style>
+        .user_name {
+            display: block;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+    </style>
 </head>
 <body>
 <form id="Form1" runat="server">
@@ -20,14 +27,16 @@
             <img src="imgs/avatar.jpg" width="150" height="150" />
           </div>
           <div class="user_personel_info">
-            <h2 class="user_name">Lorem, ipsum.</h2>
+           <asp:Label ID="User_name" class="user_name" runat="server" Text="Lorem, ipsum"></asp:Label>
+           <asp:Label ID="User_bio" class="user_bio" runat="server" Text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic error labore fuga nobis. Non fuga ipsa sit nulla atque? Ipsa eos atque quae dolore eligendi harum ratione voluptatum aliquid consequuntur?"></asp:Label>
+            <%--<h2 class="user_name">.</h2>--%>
             <!-- <h3 class="user_email">example@example.com</h3> -->
-            <p class="user_bio">
+            <%--<p class="user_bio">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic error
               labore fuga nobis. Non fuga ipsa sit nulla atque? Ipsa eos atque
               quae dolore eligendi harum ratione voluptatum aliquid
               consequuntur?
-            </p>
+            </p>--%>
           </div>
         </div>
       </div>
@@ -52,11 +61,11 @@
         <h2><br/>Informations sur le profil</h2>
             <p>name</p>  
             <div class="field name_field">
-                    <asp:TextBox ID="TextBox1" type="text" name="email" class="input" Text="Lorem, ipsum" placeholder="Email" runat="server" required></asp:TextBox>
+                    <asp:TextBox ID="Input_Name" type="text" name="email" class="input" Text="Lorem, ipsum" placeholder="Email" runat="server" required></asp:TextBox>
             </div>
             <p>bio</p>
             <div class="field bio_field">
-                <textarea name="bio" class="input" id="" cols="50" rows="5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic error labore fuga nobis. Non fuga ipsa sit nulla atque? Ipsa eos atque quaedolore eligendi harum ratione voluptatum aliquid consequuntur?</textarea>
+                <textarea id="Input_bio" name="bio" class="input" id="" cols="50" rows="5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic error labore fuga nobis. Non fuga ipsa sit nulla atque? Ipsa eos atque quaedolore eligendi harum ratione voluptatum aliquid consequuntur?</textarea>
             </div>
             <asp:Button class="button"  ID="Button2" runat="server" Text="mettre à jour le profil" />
         <h2><br/>Changer le mot de passe</h2>
@@ -279,6 +288,11 @@
     
     <div class="box"></div>
     <script src="js/index.js" lang="javascript" type="text/javascript" ></script>
+    <script lang="javascript" type="text/javascript" >
+        var bio = document.getElementById('Input_bio');
+        console.log(bio)
+        bio.value = "<%= User_Bio_Input %>";
+    </script>
 </form>
 </body>
 </html>

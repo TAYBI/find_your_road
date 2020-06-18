@@ -13,22 +13,22 @@ namespace find_your_road {
     public partial class Sign_In {
         
         /// <summary>
-        /// TextBox1 control.
+        /// email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox email;
         
         /// <summary>
-        /// TextBox2 control.
+        /// motpass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox motpass;
         
         /// <summary>
         /// Button1 control.
