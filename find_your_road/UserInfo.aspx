@@ -24,20 +24,11 @@
       <div class="container">
         <div class="user_info">
           <div class="avatar">
-            <%--<img src="imgs/avatar.jpg" width="150" height="150" />--%>
             <asp:ImageButton ID="User_Avatar" ImageUrl="~/imgs/avatar.jpg" runat="server" Height="150px" Width="150px" />
           </div>
           <div class="user_personel_info">
            <asp:Label ID="User_name" class="user_name" runat="server" Text="Lorem, ipsum"></asp:Label>
-           <asp:Label ID="User_bio" class="user_bio" runat="server" Text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic error labore fuga nobis. Non fuga ipsa sit nulla atque? Ipsa eos atque quae dolore eligendi harum ratione voluptatum aliquid consequuntur?"></asp:Label>
-              <%--<h2 class="user_name">.</h2>--%>
-            <!-- <h3 class="user_email">example@example.com</h3> -->
-              <%--<p class="user_bio">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic error
-              labore fuga nobis. Non fuga ipsa sit nulla atque? Ipsa eos atque
-              quae dolore eligendi harum ratione voluptatum aliquid
-              consequuntur?
-            </p>--%>
+           <asp:Label ID="User_bio" class="user_bio" runat="server" Text=""></asp:Label>
           </div>
         </div>
       </div>
@@ -62,22 +53,30 @@
         <h2><br/>Informations sur le profil</h2>
             <p>name</p>  
             <div class="field name_field">
-                    <asp:TextBox ID="Input_Name" type="text" name="email" class="input" Text="Lorem, ipsum" placeholder="Email" runat="server" required></asp:TextBox>
+                    <asp:TextBox ID="Input_Name" type="text" name="email" class="input"
+                         Text="Lorem, ipsum" placeholder="Email" 
+                         runat="server" required></asp:TextBox>
             </div>
             <p>bio</p>
             <div class="field bio_field">
-                <textarea id="Input_bio" name="bio" class="input" id="" cols="50" rows="5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic error labore fuga nobis. Non fuga ipsa sit nulla atque? Ipsa eos atque quaedolore eligendi harum ratione voluptatum aliquid consequuntur?</textarea>
+                <textarea id="Input_bio" name="bio" class="input" cols="50" rows="5"></textarea>
+                <asp:HiddenField runat="server" ID="bio_asp_value" Value="" />
             </div>
-            <asp:Button class="button"  ID="Button2" runat="server" Text="mettre à jour le profil" />
+            <asp:Button class="button" ID="change_profile" 
+                 OnClick="change_profile_Click"  runat="server" Text="mettre à jour le profil" />
         <h2><br/>Changer le mot de passe</h2>
             <div class="field">
-                    <asp:TextBox ID="TextBox2" type="password" class="input" placeholder="Ancien mot de passe" runat="server" ></asp:TextBox>
+                    <asp:TextBox ID="change_mdps"  OnClick="change_mdps_Click" 
+                        type="password" class="input" 
+                        placeholder="Ancien mot de passe" runat="server" ></asp:TextBox>
             </div>
             <div class="field">
-                    <asp:TextBox ID="TextBox3" type="password" class="input" placeholder="Nouveau mot de passe" runat="server" ></asp:TextBox>
+                    <asp:TextBox ID="TextBox3" type="password" class="input" 
+                        placeholder="Nouveau mot de passe" runat="server" ></asp:TextBox>
             </div>
             <div class="field">
-                    <asp:TextBox ID="TextBox4" type="password" class="input" placeholder="Confirmer le nouveau mot de passe" runat="server" ></asp:TextBox>
+                    <asp:TextBox ID="TextBox4" type="password" class="input" 
+                        placeholder="Confirmer le nouveau mot de passe" runat="server" ></asp:TextBox>
             </div>
             <asp:Button class="button" ID="Button1" runat="server" Text="mettre à jour le mot de passe" />
         <h2><br />Zone dangereuse</h2>
@@ -291,8 +290,19 @@
     <script src="js/index.js" lang="javascript" type="text/javascript" ></script>
     <script lang="javascript" type="text/javascript" >
         var bio = document.getElementById('Input_bio');
-        console.log(bio)
+        var bio_asp = document.getElementById("<%=bio_asp_value.ClientID%>");
+        var change_profile = document.getElementById('change_profile');
+
+        bio.addEventListener('keyup', function (e) {
+            bio_asp.value = bio.value;
+            console.log("bio_aps:" + bio_asp.value);
+        });
+
         bio.value = "<%= User_Bio_Input %>";
+        bio_asp.value = "<%= User_Bio_Input %>";
+        window.onload = function () {
+            bio.value = "<%= User_Bio_Input %>";            
+        };
     </script>
 </form>
 </body>

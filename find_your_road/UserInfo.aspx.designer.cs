@@ -58,22 +58,31 @@ namespace find_your_road {
         protected global::System.Web.UI.WebControls.TextBox Input_Name;
         
         /// <summary>
-        /// Button2 control.
+        /// bio_asp_value control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.HiddenField bio_asp_value;
         
         /// <summary>
-        /// TextBox2 control.
+        /// change_profile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.Button change_profile;
+        
+        /// <summary>
+        /// change_mdps control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox change_mdps;
         
         /// <summary>
         /// TextBox3 control.

@@ -47,7 +47,7 @@
         </div>
         <br />
         <hr style="margin-bottom: 2rem;"/>
-        <asp:Button class="button" ID="Button1" runat="server" Text="téléverser un fichier" />
+        <%--<asp:Button class="button" ID="Button1" runat="server" Text="téléverser un fichier" />--%>
         <asp:Button class="button btnGreen" ID="Button2" runat="server" Text="enregistrer et publier" />
     </div> 
         

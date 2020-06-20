@@ -43,6 +43,7 @@ namespace find_your_road
             {
                 user = new User(dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString());
                 Session["User"] = user;
+                Session["User_id"] = dr[0].ToString();
                 Response.Redirect("Home.aspx");
             }
             con.Close();

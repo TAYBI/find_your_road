@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 using find_your_road.Classes;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace find_your_road
 {
@@ -13,6 +15,22 @@ namespace find_your_road
     {
         User user;
         String bio;
+        String user_id;
+        SqlConnection con = new SqlConnection("Data Source=Bilal-PC;Initial "+
+                                              "Catalog=db;Integrated Security=True");
+
+        //public void init_user_info(SqlDataReader dr)
+        //{
+        //    if (dr.Read())
+        //    {
+        //        Page.Title = "Profile | " + dr[1].ToString();
+        //        User_name.Text = dr[1].ToString();
+        //        Input_Name.Text = dr[1].ToString();
+        //        User_bio.Text = dr[4].ToString();
+        //        bio = dr[4].ToString();
+        //    }
+        //}
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -28,8 +46,41 @@ namespace find_your_road
                     User_bio.Text = user.getBio();
                     bio = user.getBio();
                 }
+                if((String)Session["User_id"] != null)
+                    user_id = (String)Session["User_id"];
             }
         }
         protected string User_Bio_Input { get { return bio; } }
+
+        protected void change_profile_Click(object sender, EventArgs e)
+        {
+            String bio_ = bio_asp_value.Value.ToString();
+            String name = Input_Name.Text;
+            user = (User)Session["User"];
+            user_id = (String)Session["User_id"];
+            
+            con.Open();
+            
+            //SqlCommand cmd2 = new SqlCommand("UPDATE User_ SET Name ='"+name+"', Bio = '"+bio_
+            //    +"' WHERE UserId ='"+user_id+"'", con);
+            //cmd2.ExecuteNonQuery();
+
+            SqlCommand cmd = new SqlCommand("SELECT * FROM User_ WHERE UserId = '" + user_id + "'", con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                Page.Title = "Profile | " + dr[1].ToString();
+                User_name.Text = dr[1].ToString();
+                Input_Name.Text = dr[1].ToString();
+                User_bio.Text = dr[4].ToString();
+                bio = dr[4].ToString();
+            }
+            con.Close();
+        }
+
+        protected void change_mdps_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

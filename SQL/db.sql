@@ -1,4 +1,5 @@
 CREATE DATABASE db
+DROP DATABASE db
 USE db
 
 CREATE TABLE User_ (
@@ -14,8 +15,9 @@ CREATE TABLE Post (
 	PostId NVARCHAR(100) PRIMARY KEY,
 	UserId NVARCHAR(100) FOREIGN KEY REFERENCES User_(UserId),
 	Title VARCHAR(200),
-	Short_Info VARCHAR(2000),
+	Short_Info VARCHAR(4000),
 	Details NVARCHAR(MAX),
+	Type_ VARCHAR(50),
 	Likes INT
 )
 
@@ -23,3 +25,17 @@ CREATE TABLE Post_Liked(
 	PostId NVARCHAR(100) FOREIGN KEY REFERENCES Post(PostId),
 	UserId NVARCHAR(100) FOREIGN KEY REFERENCES User_(UserId)
 ) 
+
+ALTER TABLE Post
+ADD CONSTRAINT df_Likes
+DEFAULT 0 FOR Likes; 
+
+SELECT * FROM User_ WHERE Email = 'phebbard7@admin.ch' AND Password = 'ERhAy6'
+
+SELECT * FROM User_ WHERE UserId = '315dce0a-6d5c-4bf0-91e6-2ea17d980bf0'
+
+UPDATE User_ SET Name ='ko', Bio = 'lo' WHERE
+UserId ='315dce0a-6d5c-4bf0-91e6-2ea17d980bf0'
+
+
+DELETE FROM User_ WHERE UserId ='dc0b6378-74dc-42d4-beac-f9e90ffddc2a';
