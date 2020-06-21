@@ -30,6 +30,8 @@ ALTER TABLE Post
 ADD CONSTRAINT df_Likes
 DEFAULT 0 FOR Likes; 
 
+SELECT * FROM  Post
+
 SELECT * FROM User_ WHERE Email = 'phebbard7@admin.ch' AND Password = 'ERhAy6'
 
 SELECT * FROM User_ WHERE UserId = '315dce0a-6d5c-4bf0-91e6-2ea17d980bf0'

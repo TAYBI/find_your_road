@@ -33,8 +33,8 @@
               <option value="server side">server side</option>
               <option value="mobile">mobile</option>
             </select>
-        <div class="grid">
-          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="Link" runat="server" class="card">
+        <div id="grid" class="grid" runat="server">
+<%--          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="Link" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
           </asp:HyperLink>
@@ -117,7 +117,7 @@
           <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink20" runat="server" class="card">
             <h4><b>Lorem, ipsum.</b></h4> 
             <p>Lorem ipsum dolor sit amet.</p> 
-          </asp:HyperLink>
+          </asp:HyperLink>--%>
         </div>
       </div>
     </div>
@@ -125,6 +125,12 @@
 
         
     <div class="box"></div>
+    <script lang="javascript" type="text/javascript" >
+        var gid = document.querySelector('grid');
+        // var bio_asp = document.getElementById("
+        //<
+        //%=bio_asp_value.ClientID%>");
+    </script>
     </form>
 </body>
 </html>
