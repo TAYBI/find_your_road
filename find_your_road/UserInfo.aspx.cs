@@ -80,7 +80,16 @@ namespace find_your_road
 
         protected void change_mdps_Click(object sender, EventArgs e)
         {
+            user = (User)Session["User"];
+            user_id = (String)Session["User_id"];
 
+            if (change_mdps_orgn.Text == user.getPassword() && 
+                change_mdps_config.Text == change_mdps_config2.Text)
+            {
+                SqlCommand cmd2 = new SqlCommand("UPDATE User_ SET Password ='" +
+                    change_mdps_config.Text + "' WHERE UserId ='" + user_id + "'", con);
+                cmd2.ExecuteNonQuery();
+            }
         }
     }
 }

@@ -25,20 +25,28 @@ namespace find_your_road
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                HyperLink hyperLink = new HyperLink();
-                //String card = "<a id=\"" + dr[0].ToString() + "\" href=\"PostInfo.aspx\" class=\"card\">" +
-                //              "<h4><b>" + dr[2].ToString() + "</b></h4>" +
-                //              "<p>" + dr[3].ToString() + "</p>" +
-                //              "</a>";
-                hyperLink.CssClass = "card";
-                hyperLink.ID = dr[5].ToString();
-                hyperLink.Text = "<h4><b>" + dr[2].ToString() + "</b></h4>" +
-                                 "<p>" + dr[3].ToString() + "</p>";
-                //hyperLink.Click += (linkGoSomewhere_Click);
-                //grid.InnerHtml += card;
-                grid.Controls.Add(hyperLink);
+                String card = "<div id=\"" + dr[0].ToString() + "\" class=\"card\">" +
+                              "<h4><b>" + dr[2].ToString() + "</b></h4>" + 
+                              "<p>" + dr[3].ToString() + "</p>" +
+                              "</div>";
+                grid.InnerHtml += card;
             }
             con.Close(); 
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="strpath"></param>
+        /// <returns></returns>
+        /// 
+
+        [System.Web.Services.WebMethod]
+        public static string id_Session(string strpath)
+        {
+            Page objp = new Page();
+            objp.Session["Post_Id"] = strpath;
+            return strpath;
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -54,13 +62,6 @@ namespace find_your_road
                     get_posts();
                 }
             }
-        }
-
-        protected void post_Click(object sender, EventArgs e)
-        {
-            HyperLink hyperLink = (HyperLink)sender;
-            Session["Poost_Id"] = hyperLink.ID;
-            Response.Redirect("PostInfo.aspx");
         }
     }
 }

@@ -76,31 +76,31 @@ namespace find_your_road {
         protected global::System.Web.UI.WebControls.Button change_profile;
         
         /// <summary>
-        /// change_mdps control.
+        /// change_mdps_orgn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox change_mdps;
+        protected global::System.Web.UI.WebControls.TextBox change_mdps_orgn;
         
         /// <summary>
-        /// TextBox3 control.
+        /// change_mdps_config control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox change_mdps_config;
         
         /// <summary>
-        /// TextBox4 control.
+        /// change_mdps_config2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox change_mdps_config2;
         
         /// <summary>
         /// Button1 control.

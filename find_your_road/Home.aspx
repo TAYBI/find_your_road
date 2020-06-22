@@ -34,102 +34,25 @@
               <option value="mobile">mobile</option>
             </select>
         <div id="grid" class="grid" runat="server">
-<%--          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="Link" runat="server" class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </asp:HyperLink>
-          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink1" runat="server" class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </asp:HyperLink>
-          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink2" runat="server" class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </asp:HyperLink>
-          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink3" runat="server" class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </asp:HyperLink>
-          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink4" runat="server" class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </asp:HyperLink>
-          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink5" runat="server" class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </asp:HyperLink>
-          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink6" runat="server" class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </asp:HyperLink>
-          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink7" runat="server" class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </asp:HyperLink>
-          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink8" runat="server" class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </asp:HyperLink>
-          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink9" runat="server" class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </asp:HyperLink>
-          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink10" runat="server" class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </asp:HyperLink>
-          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink11" runat="server" class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </asp:HyperLink>
-          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink12" runat="server" class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </asp:HyperLink>
-          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink13" runat="server" class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </asp:HyperLink>
-          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink14" runat="server" class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </asp:HyperLink>
-          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink15" runat="server" class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </asp:HyperLink>
-          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink16" runat="server" class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </asp:HyperLink>
-          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink17" runat="server" class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </asp:HyperLink>
-          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink18" runat="server" class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </asp:HyperLink>
-          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink19" runat="server" class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </asp:HyperLink>
-          <asp:HyperLink NavigateUrl="~/PostInfo.aspx" ID="HyperLink20" runat="server" class="card">
-            <h4><b>Lorem, ipsum.</b></h4> 
-            <p>Lorem ipsum dolor sit amet.</p> 
-          </asp:HyperLink>--%>
         </div>
       </div>
     </div>
     </main>
-
-        
+        <asp:ScriptManager EnablePageMethods="true" 
+            ID="MainSM" runat="server" ScriptMode="Release" LoadScriptsBeforeUI="true"></asp:ScriptManager>
     <div class="box"></div>
     <script lang="javascript" type="text/javascript" >
-        var gid = document.querySelector('grid');
-        // var bio_asp = document.getElementById("
-        //<
-        //%=bio_asp_value.ClientID%>");
+        //var gid = document.querySelector('grid');
+
+        var cards = document.querySelectorAll('.card');
+        for (var i = 0; i < cards.length; i++) {
+            cards[i].addEventListener('click', function (e) {
+                var id = e.target.id;
+                PageMethods.id_Session(id);
+                console.log(e.target.id);
+                location.href = "PostInfo.aspx";
+            });
+        }
     </script>
     </form>
 </body>

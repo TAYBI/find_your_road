@@ -24,7 +24,8 @@
       <div class="container">
         <div class="user_info">
           <div class="avatar">
-            <asp:ImageButton ID="User_Avatar" ImageUrl="~/imgs/avatar.jpg" runat="server" Height="150px" Width="150px" />
+            <asp:ImageButton ID="User_Avatar" ImageUrl="~/imgs/avatar.jpg" 
+                runat="server" Height="150px" Width="150px" />
           </div>
           <div class="user_personel_info">
            <asp:Label ID="User_name" class="user_name" runat="server" Text="Lorem, ipsum"></asp:Label>
@@ -66,19 +67,19 @@
                  OnClick="change_profile_Click"  runat="server" Text="mettre à jour le profil" />
         <h2><br/>Changer le mot de passe</h2>
             <div class="field">
-                    <asp:TextBox ID="change_mdps"  OnClick="change_mdps_Click" 
-                        type="password" class="input" 
+                <asp:TextBox ID="change_mdps_orgn" type="password" class="input" 
                         placeholder="Ancien mot de passe" runat="server" ></asp:TextBox>
             </div>
             <div class="field">
-                    <asp:TextBox ID="TextBox3" type="password" class="input" 
+                <asp:TextBox ID="change_mdps_config" type="password" class="input" 
                         placeholder="Nouveau mot de passe" runat="server" ></asp:TextBox>
             </div>
             <div class="field">
-                    <asp:TextBox ID="TextBox4" type="password" class="input" 
+                <asp:TextBox ID="change_mdps_config2" type="password" class="input" 
                         placeholder="Confirmer le nouveau mot de passe" runat="server" ></asp:TextBox>
             </div>
-            <asp:Button class="button" ID="Button1" runat="server" Text="mettre à jour le mot de passe" />
+            <asp:Button class="button" ID="Button1" runat="server" 
+                    OnClick="change_mdps_Click"  Text="mettre à jour le mot de passe" />
         <h2><br />Zone dangereuse</h2>
             <asp:Button class="button danger" ID="Button3" runat="server" Text="supprimer mon compte" />
       </div>

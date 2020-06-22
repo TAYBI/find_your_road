@@ -14,6 +14,7 @@ namespace find_your_road
         }
         protected void Page_Load(object sender, EventArgs e)
         {
+            Label1.Text = (String)Session["Post_Id"];
             //Session["html"] = @"";
             //UserID = Session["html"];
         }

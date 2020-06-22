@@ -39,28 +39,28 @@
     <a  class="home_link" href="Home.aspx">Home</a>
     <div class="container">
         <h1>post info</h1>
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
     </div>
-    <asp:HiddenField id="hdn" runat="server"></asp:HiddenField>
-    </form>
     <div class="box"></div>
+    </form>
     <script src="js/mdtohtml.min.js"></script>
     <script>
         // Actual default values
 
-        var md = new Remarkable({
-            html: false, // Enable HTML tags in source
-            xhtmlOut: false, // Use '/' to close single tags (<br />)
-            breaks: false, // Convert '\n' in paragraphs into <br>
-            linkify: false, // Autoconvert URL-like text to links
+        //var md = new Remarkable({
+        //    html: false, // Enable HTML tags in source
+        //    xhtmlOut: false, // Use '/' to close single tags (<br />)
+        //    breaks: false, // Convert '\n' in paragraphs into <br>
+        //    linkify: false, // Autoconvert URL-like text to links
 
-            // Enable some language-neutral replacement + quotes beautification
-            typographer: false,
+        //    // Enable some language-neutral replacement + quotes beautification
+        //    typographer: false,
 
-            // Double + single quotes replacement pairs, when typographer enabled,
-            // and smartquotes on. Set doubles to '«»' for Russian, '„“' for German.
-            quotes: "“”‘’",
-        });
-        var container = document.querySelector(".container");
+        //    // Double + single quotes replacement pairs, when typographer enabled,
+        //    // and smartquotes on. Set doubles to '«»' for Russian, '„“' for German.
+        //    quotes: "“”‘’",
+        //});
+        //var container = document.querySelector(".container");
 
 //        var md_ = `# Project Title
 
@@ -73,12 +73,14 @@
 //### Prerequisites
 
 //What things you need to install the software and how to install them`; 
-        //"<%
+        //"
+        //<
+        //%
         //= html() %>";
 
-        document.getElementById('<%=hdn.ClientID%>').value = "assign your javascript variable value here";
-        var html = md.render("# lorem lorem     ")
-        container.innerHTML = html;
+        //document.getElementById('=hdn.ClientID').value = "assign your javascript variable value here";
+        //var html = md.render("# lorem lorem     ")
+        //container.innerHTML = html;
     </script>
 </body>
 </html>
