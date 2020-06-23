@@ -31,6 +31,43 @@ namespace find_your_road
         //    }
         //}
 
+        public void get_my_post()
+        {
+            con.Open();
+            my_post.InnerHtml = "";
+            user_id = (String)Session["User_id"];
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Post WHERE UserId ='"+user_id+"'", con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                String card = "<div id=\"" + dr[0].ToString() + "\" class=\"card\">" +
+                              "<h4><b>" + dr[2].ToString() + "</b></h4>" +
+                              "<p>" + dr[3].ToString() + "</p>" +
+                              "</div>";
+                my_post.InnerHtml += card;
+            }
+            con.Close();
+        }
+
+        public void get_post_I_liked()
+        {
+            con.Open();
+            post_I_liked.InnerHtml = "";
+            user_id = (String)Session["User_id"];
+            SqlCommand cmd = new SqlCommand("SELECT P.*  FROM Post P,"+
+                " Post_Liked PL WHERE P.PostId = PL.PostId and PL.UserId = '"+user_id+"'", con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                String card = "<div id=\"" + dr[0].ToString() + "\" class=\"card\">" +
+                              "<h4><b>" + dr[2].ToString() + "</b></h4>" +
+                              "<p>" + dr[3].ToString() + "</p>" +
+                              "</div>";
+                post_I_liked.InnerHtml += card;
+            }
+            con.Close();
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -45,6 +82,10 @@ namespace find_your_road
                     Input_Name.Text = user.getName();
                     User_bio.Text = user.getBio();
                     bio = user.getBio();
+
+                    get_my_post();
+                    get_post_I_liked();
+
                 }
                 if((String)Session["User_id"] != null)
                     user_id = (String)Session["User_id"];
