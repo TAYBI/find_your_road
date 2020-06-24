@@ -19,22 +19,25 @@
         <hr />
        <b>titre</b>  
        <div class="field name_field">
-            <asp:TextBox ID="TextBox1" type="text" name="email" class="input" 
+            <asp:TextBox ID="Post_Title" type="text" name="email" class="input" 
                 Text="Lorem, ipsum" placeholder="Email" runat="server" required></asp:TextBox>
        </div>
         <br />
        <h4>info</h4>
        <div class="field bio_field">
             <textarea name="bio" class="input" 
-                id="Textarea1" cols="50" rows="2" required>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic error labore fuga nobis. Non fuga ipsa sit nulla atque? Ipsa eos atque quaedolore eligendi harum ratione voluptatum aliquid consequuntur?</textarea>
+                id="Post_Dis" cols="50" rows="2" runat="server" required>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic error labore fuga nobis. Non fuga ipsa sit nulla atque? Ipsa eos atque quaedolore eligendi harum ratione voluptatum aliquid consequuntur?</textarea>
+       </div>
+        <br />
+        <b>type</b>  
+       <div class="field name_field">
+            <asp:TextBox ID="Post_Type" type="text" name="email" class="input" 
+                Text="Lorem, ipsum" placeholder="Email" runat="server" required></asp:TextBox>
        </div>
         <br />
         <i>markdown editor</i>
       <textarea name="" id="markdown"></textarea>
     </div>
-
-
-
     <div class="container">
         <div class="filter">
             <b>Choisissez un type:</b>
@@ -48,19 +51,32 @@
         <br />
         <hr style="margin-bottom: 2rem;"/>
         <%--<asp:Button class="button" ID="Button1" runat="server" Text="téléverser un fichier" />--%>
-        <asp:Button class="button btnGreen" ID="Button2" runat="server" Text="enregistrer et publier" />
+        <asp:Button class="button btnGreen" ID="Button2" runat="server" 
+            Text="enregistrer et publier" OnClick="Button2_Click" 
+            OnClientClick="Set_Post_detail();" />
     </div> 
         
+        
+    <asp:HiddenField runat="server" ID="post_Details" Value="" />
     <div class="box"></div>
     </form>
     <script src="js/simplemd.min.js"></script>
+    <script src="js/mdtohtml.min.js"></script>
     <script>
+        var md = new Remarkable({
+            html: false, // Enable HTML tags in source            xhtmlOut: false, // Use '/' to close single tags (<br />)            breaks: false, // Convert '\n' in paragraphs into <br>            linkify: false, // Autoconvert URL-like text to links            // Enable some language-neutral replacement + quotes beautification            typographer: false,            // Double + single quotes replacement pairs, when typographer enabled,            // and smartquotes on. Set doubles to '«»' for Russian, '„“' for German.            quotes: "“”‘’",
+        });
+
         var simplemde = new SimpleMDE({ element: document.getElementById("markdown") });
         var btn = document.querySelector("#Button2");
-        btn.addEventListener("click", function (e) {
+        var postDetails = document.querySelector("#post_Details");
+        //btn.addEventListener("click", 
+        function Set_Post_detail(e) {
             e.preventDefault();
-            console.log(simplemde.value() == "")
-        })
+            postDetails.value = md.render(simplemde.value());
+            console.log(postDetails.value)
+        }
+        //)
     </script>
 </body>
 </html>

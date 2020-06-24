@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <h2>Sing In</h2>
+     <h2>Sign In</h2>
     <div class="field">
         <asp:TextBox ID="email" type="email" name="email" class="input" placeholder="Email" runat="server" required></asp:TextBox>
     </div>

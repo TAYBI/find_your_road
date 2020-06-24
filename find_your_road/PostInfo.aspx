@@ -43,44 +43,7 @@
     </div>
     <div class="box"></div>
     </form>
-    <script src="js/mdtohtml.min.js"></script>
-    <script>
-        // Actual default values
-
-        //var md = new Remarkable({
-        //    html: false, // Enable HTML tags in source
-        //    xhtmlOut: false, // Use '/' to close single tags (<br />)
-        //    breaks: false, // Convert '\n' in paragraphs into <br>
-        //    linkify: false, // Autoconvert URL-like text to links
-
-        //    // Enable some language-neutral replacement + quotes beautification
-        //    typographer: false,
-
-        //    // Double + single quotes replacement pairs, when typographer enabled,
-        //    // and smartquotes on. Set doubles to '«»' for Russian, '„“' for German.
-        //    quotes: "“”‘’",
-        //});
-        //var container = document.querySelector(".container");
-
-//        var md_ = `# Project Title
-
-//One Paragraph of project description goes here 
-
-//## Getting Started
-
-//These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-//### Prerequisites
-
-//What things you need to install the software and how to install them`; 
-        //"
-        //<
-        //%
-        //= html() %>";
-
-        //document.getElementById('=hdn.ClientID').value = "assign your javascript variable value here";
-        //var html = md.render("# lorem lorem     ")
-        //container.innerHTML = html;
-    </script>
+        <!--<script>             //Actual default values            var md = new Remarkable({                html: false, // Enable HTML tags in source                xhtmlOut: false, // Use '/' to close single tags (<br />)                breaks: false, // Convert '\n' in paragraphs into <br>                linkify: false, // Autoconvert URL-like text to links                // Enable some language-neutral replacement + quotes beautification                typographer: false,                // Double + single quotes replacement pairs, when typographer enabled,                // and smartquotes on. Set doubles to '«»' for Russian, '„“' for German.                quotes: "“”‘’",            });
+    </script>-->
 </body>
 </html>

@@ -19,7 +19,8 @@ namespace find_your_road
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session["User"] = null;
+            Session["User_id"] = null;
         }
 
         protected void Button1_Click(object sender, EventArgs e)
