@@ -25,17 +25,17 @@
     <div class="box"></div>
 
     <div class="container">
-          <div class="filter">
+            <div class="filter">
             <label for="cars">Choose a type:</label>
             <select name="option" id="option">
-              <option value="web">web</option>
-              <option value="design">design</option>
-              <option value="server side">server side</option>
-              <option value="mobile">mobile</option>
+                <option value="web">web</option>
+                <option value="design">design</option>
+                <option value="server side">server side</option>
+                <option value="mobile">mobile</option>
             </select>
         <div id="grid" class="grid" runat="server">
         </div>
-      </div>
+        </div>
     </div>
     </main>
         <asp:ScriptManager EnablePageMethods="true" 

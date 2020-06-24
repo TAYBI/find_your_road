@@ -37,7 +37,7 @@
     <form id="form1" runat="server">
     <div class="box"></div>
     <a  class="home_link" href="Home.aspx">Home</a>
-    <div class="container">
+    <div class="container" id="container" runat="server">
         <h1>post info</h1>
         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
     </div>

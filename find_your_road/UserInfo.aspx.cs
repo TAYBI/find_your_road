@@ -19,18 +19,6 @@ namespace find_your_road
         SqlConnection con = new SqlConnection("Data Source=Bilal-PC;Initial "+
                                               "Catalog=db;Integrated Security=True");
 
-        //public void init_user_info(SqlDataReader dr)
-        //{
-        //    if (dr.Read())
-        //    {
-        //        Page.Title = "Profile | " + dr[1].ToString();
-        //        User_name.Text = dr[1].ToString();
-        //        Input_Name.Text = dr[1].ToString();
-        //        User_bio.Text = dr[4].ToString();
-        //        bio = dr[4].ToString();
-        //    }
-        //}
-
         public void get_my_post()
         {
             con.Open();
@@ -85,7 +73,6 @@ namespace find_your_road
 
                     get_my_post();
                     get_post_I_liked();
-
                 }
                 if((String)Session["User_id"] != null)
                     user_id = (String)Session["User_id"];
@@ -101,9 +88,9 @@ namespace find_your_road
             user_id = (String)Session["User_id"];
             
             con.Open();
-            
-            //SqlCommand cmd2 = new SqlCommand("UPDATE User_ SET Name ='"+name+"', Bio = '"+bio_
-            //    +"' WHERE UserId ='"+user_id+"'", con);
+
+            //SqlCommand cmd2 = new SqlCommand("UPDATE User_ SET Name ='" + name + "', Bio = '" + bio_
+            //    + "' WHERE UserId ='" + user_id + "'", con);
             //cmd2.ExecuteNonQuery();
 
             SqlCommand cmd = new SqlCommand("SELECT * FROM User_ WHERE UserId = '" + user_id + "'", con);
