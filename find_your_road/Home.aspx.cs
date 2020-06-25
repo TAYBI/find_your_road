@@ -25,9 +25,11 @@ namespace find_your_road
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                String card = "<div id=\"" + dr[0].ToString() + "\" class=\"card\">" +
+                String card = "<div class=\"card\">" +
                               "<h4><b>" + dr[2].ToString() + "</b></h4>" + 
                               "<p>" + dr[3].ToString() + "</p>" +
+                              "<button class=\"button\" id=\"" + dr[0].ToString() +
+                              "\" >Details</button>" +
                               "</div>";
                 grid.InnerHtml += card;
             }

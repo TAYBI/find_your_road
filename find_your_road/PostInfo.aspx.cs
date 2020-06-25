@@ -29,8 +29,11 @@ namespace find_your_road
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                Label1.Text = dr[4].ToString();
+                //Label1.Text = dr[4].ToString();
             }
+            else
+                Response.Redirect("Home.aspx");
+
             con.Close();
         }
 

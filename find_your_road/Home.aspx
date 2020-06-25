@@ -44,15 +44,19 @@
     <script lang="javascript" type="text/javascript" >
         //var gid = document.querySelector('grid');
 
-        var cards = document.querySelectorAll('.card');
+        var cards = document.querySelectorAll('.button');
         for (var i = 0; i < cards.length; i++) {
-            cards[i].addEventListener('click', function (e) {
-                var id = e.target.id;
-                PageMethods.id_Session(id);
-                console.log(e.target.id);
-                location.href = "PostInfo.aspx";
-            });
+            cards[i].addEventListener('click', clicked)
         }
+
+        function clicked(e) {
+            e.preventDefault();
+            var id = e.target.id;
+            PageMethods.id_Session(id);
+            //
+            console.log(e.target.id);
+            location.href = "PostInfo.aspx";
+        };
     </script>
     </form>
 </body>

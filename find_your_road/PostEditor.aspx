@@ -20,13 +20,14 @@
        <b>titre</b>  
        <div class="field name_field">
             <asp:TextBox ID="Post_Title" type="text" name="email" class="input" 
-                Text="Lorem, ipsum" placeholder="Email" runat="server" required></asp:TextBox>
+                placeholder="Post titre" runat="server" required></asp:TextBox>
        </div>
         <br />
        <h4>info</h4>
        <div class="field bio_field">
             <textarea name="bio" class="input" 
-                id="Post_Dis" cols="50" rows="2" runat="server" required>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic error labore fuga nobis. Non fuga ipsa sit nulla atque? Ipsa eos atque quaedolore eligendi harum ratione voluptatum aliquid consequuntur?</textarea>
+                id="Post_Dis" cols="50" rows="2" runat="server" 
+                placeholder="Post description" required></textarea>
        </div>
         <br />
         <b>type</b>  
@@ -50,10 +51,9 @@
         </div>
         <br />
         <hr style="margin-bottom: 2rem;"/>
-        <%--<asp:Button class="button" ID="Button1" runat="server" Text="téléverser un fichier" />--%>
+        <!--<asp:Button class="button" ID="Button1" runat="server" Text="téléverser un fichier" />-->
         <asp:Button class="button btnGreen" ID="Button2" runat="server" 
-            Text="enregistrer et publier" OnClick="Button2_Click" 
-            OnClientClick="Set_Post_detail();" />
+            Text="enregistrer et publier" OnClick="Button2_Click" />
     </div> 
         
         
@@ -68,14 +68,22 @@
         });
 
         var simplemde = new SimpleMDE({ element: document.getElementById("markdown") });
+
         var btn = document.querySelector("#Button2");
         var postDetails = document.querySelector("#post_Details");
-        //btn.addEventListener("click", 
-        function Set_Post_detail(e) {
-            e.preventDefault();
-            postDetails.value = md.render(simplemde.value());
+
+        simplemde.codemirror.on("change", function () {
+            //console.log(simplemde.value());
+            postDetails.value = Server.HtmlEncode(md.render(simplemde.value()));
             console.log(postDetails.value)
-        }
+        });
+
+        //btn.addEventListener("click", 
+        //function Set_Post_detail(e) {
+        //    e.preventDefault();
+        //    postDetails.value = md.render(simplemde.value());
+        //    console.log(postDetails.value)
+        //}
         //)
     </script>
 </body>
