@@ -8,6 +8,7 @@ using System.Web.UI.WebControls;
 using find_your_road.Classes;
 using System.Data.SqlClient;
 using System.Data;
+using System.IO;
 
 namespace find_your_road
 {
@@ -18,6 +19,7 @@ namespace find_your_road
         String user_id;
         SqlConnection con = new SqlConnection("Data Source=Bilal-PC;Initial "+
                                               "Catalog=db;Integrated Security=True");
+        String imageLoc = "";
 
         public void get_my_post()
         {
@@ -29,7 +31,7 @@ namespace find_your_road
             while (dr.Read())
             {
                 String card = "<div id=\"" + dr[0].ToString() + "\" class=\"card\">" +
-                              "<h4><b>" + dr[2].ToString() + "</b></h4>" +
+                              "<h5><b>" + dr[2].ToString() + "</b></h5>" +
                               "<p>" + dr[3].ToString() + "</p>" +
                               "</div>";
                 my_post.InnerHtml += card;
@@ -48,7 +50,7 @@ namespace find_your_road
             while (dr.Read())
             {
                 String card = "<div id=\"" + dr[0].ToString() + "\" class=\"card\">" +
-                              "<h4><b>" + dr[2].ToString() + "</b></h4>" +
+                              "<h5><b>" + dr[2].ToString() + "</b></h5>" +
                               "<p>" + dr[3].ToString() + "</p>" +
                               "</div>";
                 post_I_liked.InnerHtml += card;
@@ -93,7 +95,8 @@ namespace find_your_road
             //    + "' WHERE UserId ='" + user_id + "'", con);
             //cmd2.ExecuteNonQuery();
 
-            SqlCommand cmd = new SqlCommand("SELECT * FROM User_ WHERE UserId = '" + user_id + "'", con);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM User_ WHERE UserId = '" +
+                                                user_id + "'", con);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
             {
@@ -118,6 +121,66 @@ namespace find_your_road
                     change_mdps_config.Text + "' WHERE UserId ='" + user_id + "'", con);
                 cmd2.ExecuteNonQuery();
             }
+        }
+
+        protected void User_Avatar_Click(object sender, ImageClickEventArgs e)
+        {
+            string folderPath = Server.MapPath("~/Desktop/");
+
+            //Check whether Directory (Folder) exists.
+            if (!Directory.Exists(folderPath))
+            {
+                //If Directory (Folder) does not exists Create it.
+                Directory.CreateDirectory(folderPath);
+            }
+
+            //Save the File to the Directory (Folder).
+            FileUpload1.SaveAs(folderPath + Path.GetFileName(FileUpload1.FileName));
+
+            //Display the Picture in Image control.
+            User_Avatar.ImageUrl = Path.GetFileName(FileUpload1.FileName);
+
+            //try
+            //{
+            //    FileUpload dtg = new FileUpload();
+            //    dtg.tit
+            // //   OpenFile
+            //}
+            //catch (Exception m)
+            //{
+            //}
+            //user = (User)Session["User"];
+            //con.Open();
+            //SqlCommand cmd = new SqlCommand("SELECT * FROM User_ WHERE UserId = '" +
+            //                                   user_id + "'", con);
+            //SqlDataReader dr = cmd.ExecuteReader();
+            //if (dr.Read())
+            //{
+            //    Page.Title = "Profile | " + dr[1].ToString();
+            //    User_name.Text = dr[1].ToString();
+            //    Input_Name.Text = dr[1].ToString();
+            //    User_bio.Text = dr[4].ToString();
+            //    bio = dr[4].ToString();
+            //}
+            //con.Close();
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            string folderPath = Server.MapPath("~/Files/");
+
+            //Check whether Directory (Folder) exists.
+            if (!Directory.Exists(folderPath))
+            {
+                //If Directory (Folder) does not exists Create it.
+                Directory.CreateDirectory(folderPath);
+            }
+
+            //Save the File to the Directory (Folder).
+            FileUpload1.SaveAs(folderPath + Path.GetFileName(FileUpload1.FileName));
+
+            //Display the Picture in Image control.
+            User_Avatar.ImageUrl =  "~/Files/" + Path.GetFileName(FileUpload1.FileName);
         }
     }
 }

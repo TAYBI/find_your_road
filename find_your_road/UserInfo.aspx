@@ -26,6 +26,10 @@
           <div class="avatar">
             <asp:ImageButton ID="User_Avatar" ImageUrl="~/imgs/avatar.jpg" 
                 runat="server" Height="150px" Width="150px" />
+              <asp:FileUpload ID="FileUpload1"  
+                  AllowMultiple="true" runat="server" />
+            <asp:Button class="" ID="Button2"
+                        runat="server" Text="image de profil" OnClick="Button2_Click" />
           </div>
           <div class="user_personel_info">
            <asp:Label ID="User_name" class="user_name" runat="server" Text="Lorem, ipsum"></asp:Label>
@@ -38,8 +42,7 @@
     <div class="tab">
       <div class="container">
         <button class="tablinks" onclick="openCity(event, 'profile')">
-          Profile
-        </button>
+          Profile</button>
         <button class="tablinks" onclick="openCity(event, 'my_posts')">
           My posts
         </button>

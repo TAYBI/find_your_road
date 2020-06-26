@@ -22,18 +22,17 @@ namespace find_your_road
                 Response.Redirect("Sign In.aspx");
 
             String id = (String)Session["Post_Id"];
-            Label1.Text = id;
+            //Label1.Text = id;
             
             con.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Post WHERE PostId = '"+id+"'", con);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                //Label1.Text = dr[4].ToString();
+                Label1.Text = dr[4].ToString();
             }
             else
                 Response.Redirect("Home.aspx");
-
             con.Close();
         }
 

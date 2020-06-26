@@ -13,6 +13,10 @@ header {
   border-radius: 10%;
 }
 
+.avatar  {
+  display: flex;
+  flex-direction: column    ;
+}
 .user_personel_info {
   padding-top: 1.5rem;
   padding-left: 1rem;

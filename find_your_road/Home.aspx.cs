@@ -26,9 +26,10 @@ namespace find_your_road
             while (dr.Read())
             {
                 String card = "<div class=\"card\">" +
-                              "<h4><b>" + dr[2].ToString() + "</b></h4>" + 
+                              "<hr />" +
+                              "<h3><b>" + dr[2].ToString() + "</b></h3>" + 
                               "<p>" + dr[3].ToString() + "</p>" +
-                              "<button class=\"button\" id=\"" + dr[0].ToString() +
+                              "<button class=\"button \" id=\"" + dr[0].ToString() +
                               "\" >Details</button>" +
                               "</div>";
                 grid.InnerHtml += card;
@@ -36,12 +37,6 @@ namespace find_your_road
             con.Close(); 
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="strpath"></param>
-        /// <returns></returns>
-        /// 
 
         [System.Web.Services.WebMethod]
         public static string id_Session(string strpath)
