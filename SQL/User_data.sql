@@ -37,3 +37,6 @@ values
 
 ('70b279f0-2d67-497e-ac22-cb247c8789a7', 'Roselin Birchenhead', 'rbirchenheado@ca.gov', 'Bw0PVrYnBkr', 'écrivez votre biographie ...' , '~/imgs/avatar.jpg'),
 ('27fbaf9d-ebd6-4276-a1b7-1c2634badafe', 'Laird Adcocks', 'ladcocksp@1und1.de', 'iQs1oOXihdLN', 'écrivez votre biographie ...' , '~/imgs/avatar.jpg')
+
+
+ 

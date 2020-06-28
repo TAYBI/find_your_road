@@ -26,10 +26,8 @@
           <div class="avatar">
             <asp:ImageButton ID="User_Avatar" ImageUrl="~/imgs/avatar.jpg" 
                 runat="server" Height="150px" Width="150px" />
-              <asp:FileUpload ID="FileUpload1"  
-                  AllowMultiple="true" runat="server" />
-            <asp:Button class="" ID="Button2"
-                        runat="server" Text="image de profil" OnClick="Button2_Click" />
+            <%--<asp:FileUpload ID="FileUpload1" runat="server" />--%>
+<%--            <asp:Button ID="Button2" runat="server" Text="Button" onclick="Button2_Click" />--%>
           </div>
           <div class="user_personel_info">
            <asp:Label ID="User_name" class="user_name" runat="server" Text="Lorem, ipsum"></asp:Label>
@@ -134,10 +132,10 @@
             console.log("bio_aps:" + bio_asp.value);
         });
 
-        bio.value = "<%= User_Bio_Input %>";
-        bio_asp.value = "<%= User_Bio_Input %>";
+        bio.value = `<%= User_Bio_Input %>`;
+        bio_asp.value = `<%= User_Bio_Input %>`;
         window.onload = function () {
-            bio.value = "<%= User_Bio_Input %>";            
+            bio.value = `<%= User_Bio_Input %>`;            
         };
     </script>
 </form>

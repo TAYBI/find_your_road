@@ -9,6 +9,7 @@ using find_your_road.Classes;
 using System.Data.SqlClient;
 using System.Data;
 using System.IO;
+using System.Configuration;
 
 namespace find_your_road
 {
@@ -19,7 +20,7 @@ namespace find_your_road
         String user_id;
         SqlConnection con = new SqlConnection("Data Source=Bilal-PC;Initial "+
                                               "Catalog=db;Integrated Security=True");
-        String imageLoc = "";
+        //String imageLoc = "";
 
         public void get_my_post()
         {
@@ -72,6 +73,8 @@ namespace find_your_road
                     Input_Name.Text = user.getName();
                     User_bio.Text = user.getBio();
                     bio = user.getBio();
+                    bio_asp_value.Value = user.getBio();
+
 
                     get_my_post();
                     get_post_I_liked();
@@ -80,6 +83,7 @@ namespace find_your_road
                     user_id = (String)Session["User_id"];
             }
         }
+        
         protected string User_Bio_Input { get { return bio; } }
 
         protected void change_profile_Click(object sender, EventArgs e)
@@ -91,9 +95,9 @@ namespace find_your_road
             
             con.Open();
 
-            //SqlCommand cmd2 = new SqlCommand("UPDATE User_ SET Name ='" + name + "', Bio = '" + bio_
-            //    + "' WHERE UserId ='" + user_id + "'", con);
-            //cmd2.ExecuteNonQuery();
+            SqlCommand cmd2 = new SqlCommand("UPDATE User_ SET Name ='" + name + "', Bio = '" + bio_
+                + "' WHERE UserId ='" + user_id + "'", con);
+            cmd2.ExecuteNonQuery();
 
             SqlCommand cmd = new SqlCommand("SELECT * FROM User_ WHERE UserId = '" +
                                                 user_id + "'", con);
@@ -117,28 +121,30 @@ namespace find_your_road
             if (change_mdps_orgn.Text == user.getPassword() && 
                 change_mdps_config.Text == change_mdps_config2.Text)
             {
+                con.Open();
                 SqlCommand cmd2 = new SqlCommand("UPDATE User_ SET Password ='" +
                     change_mdps_config.Text + "' WHERE UserId ='" + user_id + "'", con);
                 cmd2.ExecuteNonQuery();
+                con.Close();
             }
         }
 
         protected void User_Avatar_Click(object sender, ImageClickEventArgs e)
         {
-            string folderPath = Server.MapPath("~/Desktop/");
+            //string folderPath = Server.MapPath("~/Desktop/");
 
             //Check whether Directory (Folder) exists.
-            if (!Directory.Exists(folderPath))
-            {
-                //If Directory (Folder) does not exists Create it.
-                Directory.CreateDirectory(folderPath);
-            }
+            //if (!Directory.Exists(folderPath))
+            //{
+            //    //If Directory (Folder) does not exists Create it.
+            //    Directory.CreateDirectory(folderPath);
+            //}
 
-            //Save the File to the Directory (Folder).
-            FileUpload1.SaveAs(folderPath + Path.GetFileName(FileUpload1.FileName));
+            ////Save the File to the Directory (Folder).
+            //FileUpload1.SaveAs(folderPath + Path.GetFileName(FileUpload1.FileName));
 
-            //Display the Picture in Image control.
-            User_Avatar.ImageUrl = Path.GetFileName(FileUpload1.FileName);
+            ////Display the Picture in Image control.
+            //User_Avatar.ImageUrl = Path.GetFileName(FileUpload1.FileName);
 
             //try
             //{
@@ -165,22 +171,45 @@ namespace find_your_road
             //con.Close();
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+        protected void uploadFile_Click(object sender, EventArgs e)
         {
-            string folderPath = Server.MapPath("~/Files/");
+            //String id = (String)Session["User_id"] ;
 
-            //Check whether Directory (Folder) exists.
-            if (!Directory.Exists(folderPath))
-            {
-                //If Directory (Folder) does not exists Create it.
-                Directory.CreateDirectory(folderPath);
-            }
+            //if(FileUpload1.PostedFile != null)
+            //{
+            //    string strpath = Path.GetExtension(FileUpload1.FileName);
+            //    if (strpath != ".jpeg" && strpath != ".jpg" && strpath != ".png" && strpath != ".gif")
+            //    {
+            //        // TODO
+            //        // display msg EROR
+            //    }
 
-            //Save the File to the Directory (Folder).
-            FileUpload1.SaveAs(folderPath + Path.GetFileName(FileUpload1.FileName));
+            //    string fileimage = Path.GetFileName(FileUpload1.PostedFile.FileName);
+            //    FileUpload1.SaveAs(Server.MapPath("~/imgs/") + fileimage);
 
-            //Display the Picture in Image control.
-            User_Avatar.ImageUrl =  "~/Files/" + Path.GetFileName(FileUpload1.FileName);
+            //    con.Open();
+            //    SqlCommand cmd = new SqlCommand("UPDATE User_ SET  Avatar = '~/imgs/"+ fileimage +"'"
+            //                                    + " WHERE UserId = '" + id+ "'", con);
+            //    cmd.ExecuteNonQuery();
+            //    con.Close();
+
+            //    User_Avatar.ImageUrl = "~/imgs/" + fileimage;
+            //}
+
+        //    string folderPath = Server.MapPath("~/Files/");
+
+        //    //Check whether Directory (Folder) exists.
+        //    if (!Directory.Exists(folderPath))
+        //    {
+        //        //If Directory (Folder) does not exists Create it.
+        //        Directory.CreateDirectory(folderPath);
+        //    }
+
+        //    //Save the File to the Directory (Folder).
+        //    FileUpload1.SaveAs(folderPath + Path.GetFileName(FileUpload1.FileName));
+
+        //    //Display the Picture in Image control.
+        //    User_Avatar.ImageUrl =  "~/Files/" + Path.GetFileName(FileUpload1.FileName);
         }
     }
 }

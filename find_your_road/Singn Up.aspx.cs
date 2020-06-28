@@ -27,11 +27,9 @@ namespace find_your_road
         {
             con.Open();
             SqlCommand cmd = new SqlCommand("insert into User_ " +
-                "(UserId, Name, Email, Password, Bio, Avatar) select '" +
-                Membership.GeneratePassword(12, 1).ToString() + "', '" + name.Text + "', '" + email.Text +
-                "', '" + password.Text + "', 'écrivez votre biographie ...' , BulkColumn " +
-                "FROM Openrowset( Bulk 'C:\\Users\\Bilal\\Desktop\\find_your_road\\avatar.jpg', " +
-                "Single_Blob) as image;", con);
+                "values ('" + Membership.GeneratePassword(12, 1).ToString() + "', '" 
+                + name.Text + "', '" + email.Text + "', '" + 
+                password.Text + "', 'écrivez votre biographie ...' ,  '~/imgs/avatar.jpg')", con);
 
             cmd.ExecuteNonQuery();
 
