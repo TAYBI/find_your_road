@@ -1,5 +1,4 @@
 CREATE DATABASE db
-DROP DATABASE db
 USE db
 
 CREATE TABLE User_ (
@@ -8,7 +7,7 @@ CREATE TABLE User_ (
 	Email VARCHAR(50),
 	Password NVARCHAR(50),
 	Bio VARCHAR(MAX),
-	Avatar IMAGE
+	Avatar NVARCHAR(200)
 )
 
 CREATE TABLE Post (
