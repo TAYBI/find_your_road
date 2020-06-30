@@ -90,30 +90,28 @@
     <div class="box"></div>
         <div class="container">
           <div class="filter">
-            <label for="cars">Choose a type:</label>
-            <select name="option" id="option">
+<%--        <select name="option" id="option">
               <option value="web">web</option>
               <option value="design">design</option>
               <option value="server side">server side</option>
               <option value="mobile">mobile</option>
-            </select>
+            </select>--%>
            </div>
         <div class="grid" id="my_post" runat="server">
         </div>
       </div>
     </div>
 
-    <div id="posts_I_Liked" class="tabcontent">
+    <div  class="tabcontent">
       <div class="box"></div>
         <div class="container">
           <div class="filter">
-            <label for="cars">Choose a type:</label>
-            <select name="option" id="Select1">
+<%--        <select name="option" id="Select1">
               <option value="web">web</option>
               <option value="design">design</option>
               <option value="server side">server side</option>
               <option value="mobile">mobile</option>
-            </select>
+            </select>--%>
            </div>
         <div class="grid" id="post_I_liked" runat="server">
         </div>

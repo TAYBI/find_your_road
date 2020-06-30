@@ -59,12 +59,14 @@
     <div class="container">
             <div class="filter">
             <label for="cars">Choose a type:</label>
-            <select name="option" id="option">
+            <asp:DropDownList ID="Select" class="select" runat="server" AutoPostBack="True" OnSelectedIndexChanged="Select_SelectedIndexChanged">
+            </asp:DropDownList>
+            <%--<select name="option" id="option">
                 <option value="web">web</option>
                 <option value="design">design</option>
                 <option value="server side">server side</option>
                 <option value="mobile">mobile</option>
-            </select>
+            </select--%>
         <div id="grid" class="grid" runat="server">
         </div>
         </div>

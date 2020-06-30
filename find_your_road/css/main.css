@@ -148,8 +148,8 @@ nav a{
 
 /*--------------------------------------*/
 
-select,
-option {
+
+.option {
     border: 1px solid #333;
     margin-left: 0.4rem;
     border-radius: 2rem;

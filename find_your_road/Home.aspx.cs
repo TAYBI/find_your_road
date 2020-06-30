@@ -17,6 +17,25 @@ namespace find_your_road
         SqlConnection con = new SqlConnection("Data Source=Bilal-PC;Initial " +
                                               "Catalog=db;Integrated Security=True");
 
+        public void get_Types()
+        {
+            int selectId = Select.SelectedIndex;
+            Select.Items.Clear();
+
+            Select.Items.Add("Toute");
+            con.Open();
+            grid.InnerHtml = "";
+            SqlCommand cmd = new SqlCommand("SELECT DISTINCT Type_ FROM Post", con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                Select.Items.Add(dr[0].ToString());
+            }
+            con.Close();
+
+            Select.SelectedIndex = selectId;
+        }
+
         public void get_posts()
         {
             con.Open();
@@ -56,9 +75,40 @@ namespace find_your_road
                 {
                     User user = (User)Session["User"];
                     Page.Title = "Home | " + user.getName();
+                    get_Types();
                     get_posts();
                 }
             //}
         }
+
+        protected void Select_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String type = Select.Text;
+            String req;
+            
+            if (type == "Toute")
+                req = "SELECT * FROM Post";
+            else
+                req = "SELECT * FROM Post  WHERE Type_ = '" + type + "'";
+
+            con.Open();
+            grid.InnerHtml = "";
+           
+            SqlCommand cmd = new SqlCommand(req, con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                String card = "<div class=\"card\">" +
+                              "<hr />" +
+                              "<h3><b>" + dr[2].ToString() + "</b></h3>" +
+                              "<p>" + dr[3].ToString() + "</p>" +
+                              "<button class=\"button \" id=\"" + dr[0].ToString() +
+                              "\" >Details</button>" +
+                              "</div>";
+                grid.InnerHtml += card;
+            }
+            con.Close();
+        }
+
     }
 }

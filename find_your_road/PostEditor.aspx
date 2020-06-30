@@ -33,22 +33,26 @@
         <b>type</b>  
        <div class="field name_field">
             <asp:TextBox ID="Post_Type" type="text" name="email" class="input" 
-                Text="Lorem, ipsum" placeholder="Email" runat="server" required></asp:TextBox>
+                placeholder="Type de post" runat="server" required></asp:TextBox>
        </div>
         <br />
         <i>markdown editor</i>
       <textarea name="" id="markdown"></textarea>
     </div>
     <div class="container">
-        <div class="filter">
-            <b>Choisissez un type:</b>
-            <select name="option" id="option">
+        <%--<div class="filter">--%>
+<%--            <b>Choisissez un type:</b>
+            <asp:TextBox ID="Type" name="email" class="input" 
+                Text="Lorem, ipsum" placeholder="Email" runat="server" required></asp:Tex--tBox>--%>
+            <%--<asp:DropDownList ID="Select" class="select" runat="server">
+            </asp:DropDownList>--%>
+<%--            <select name="option" id="option">
                 <option value="web">web</option>
                 <option value="design">design</option>
                 <option value="server side">server side</option>
                 <option value="mobile">mobile</option>
-            </select>
-        </div>
+            </select>--%>
+        <%--</div>--%>
         <br />
         <hr style="margin-bottom: 2rem;"/>
         <!--<asp:Button class="button" ID="Button1" runat="server" Text="téléverser un fichier" />-->
