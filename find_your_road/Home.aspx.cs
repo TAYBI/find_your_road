@@ -45,7 +45,6 @@ namespace find_your_road
             while (dr.Read())
             {
                 String card = "<div class=\"card\">" +
-                              "<hr />" +
                               "<h3><b>" + dr[2].ToString() + "</b></h3>" + 
                               "<p>" + dr[3].ToString() + "</p>" +
                               "<button class=\"button \" id=\"" + dr[0].ToString() +

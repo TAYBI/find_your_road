@@ -32,8 +32,12 @@ namespace find_your_road
             while (dr.Read())
             {
                 String card = "<div id=\"" + dr[0].ToString() + "\" class=\"card\">" +
-                              "<h5><b>" + dr[2].ToString() + "</b></h5>" +
-                              "<p>" + dr[3].ToString() + "</p>" +
+                                "<h3><b>" + dr[2].ToString() + "</b></h3>" +
+                                "<p>" + dr[3].ToString() + "</p>" +
+                                "<div class=\"btns_my_posts\">" +
+                                    "<button class=\"button button_card\">modifier</button>" +
+                                    "<button class=\"button button_card danger\">supprimer</button>" +
+                                "</div>" +
                               "</div>";
                 my_post.InnerHtml += card;
             }
@@ -51,8 +55,11 @@ namespace find_your_road
             while (dr.Read())
             {
                 String card = "<div id=\"" + dr[0].ToString() + "\" class=\"card\">" +
-                              "<h5><b>" + dr[2].ToString() + "</b></h5>" +
-                              "<p>" + dr[3].ToString() + "</p>" +
+                              "<h3><b>" + dr[2].ToString() + "</b></h3>" +
+                              "<p class=\"p\">" + dr[3].ToString() + "</p>" +
+                                "<div class=\"btns_my_posts\">" +
+                                    "<button class=\"button button_card\">voir le post</button>" +
+                                "</div>" +
                               "</div>";
                 post_I_liked.InnerHtml += card;
             }

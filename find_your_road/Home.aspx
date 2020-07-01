@@ -20,17 +20,18 @@
             cursor: pointer;
             font-size: .9rem;
             transition: all ease-in 0.3s;
-            margin-top: 1rem;
             width: 100%;
             text-align: center;
+            margin-top: auto;
         }
 
-        hr, h3 {
+        /*h3 {
             margin-top: 1rem;
-        }
+        }*/
         
         p {
             margin-top: 0.5rem;
+            margin-bottom: 0.7rem;
         }
 
         hr {
