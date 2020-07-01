@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+using find_your_road.Classes;
 using System.Data.SqlClient;
 using System.Data;
 using System.Web.Security;
@@ -20,6 +21,11 @@ namespace find_your_road
         {
             if (Session["User"] == null)
                 Response.Redirect("Sign In.aspx");
+            else
+            {
+                User user = (User)Session["User"];
+                Page.Title = "Editeur de post | " + user.getName();
+            }
             get_Types();
         }
 

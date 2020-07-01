@@ -119,12 +119,20 @@
       </div>
     </div>
     
+    <%-- ***************************************** --%>
+        <asp:ScriptManager EnablePageMethods="true" 
+            ID="MainSM" runat="server" ScriptMode="Release"
+            LoadScriptsBeforeUI="true"></asp:ScriptManager>
+    <%-- ***************************************** --%>
+
+
     <div class="box"></div>
     <script src="js/index.js" lang="javascript" type="text/javascript" ></script>
     <script lang="javascript" type="text/javascript" >
         var bio = document.getElementById('Input_bio');
         var bio_asp = document.getElementById("<%=bio_asp_value.ClientID%>");
         var change_profile = document.getElementById('change_profile');
+        var btns = document.querySelectorAll('.post_details');
 
         bio.addEventListener('keyup', function (e) {
             bio_asp.value = bio.value;
@@ -136,6 +144,20 @@
         window.onload = function () {
             bio.value = `<%= User_Bio_Input %>`;            
         };
+
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('click', clicked);
+        }
+
+        function clicked(e) {
+            e.preventDefault();
+            var id = e.target.id;
+            PageMethods.id_Session(id);
+            //
+            console.log(e.target.id);
+            location.href = "PostInfo.aspx";
+            console.log(id);
+        }
     </script>
 </form>
 </body>

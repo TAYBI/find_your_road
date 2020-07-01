@@ -31,12 +31,14 @@ namespace find_your_road
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                String card = "<div id=\"" + dr[0].ToString() + "\" class=\"card\">" +
+                String card = "<div class=\"card\">" +
                                 "<h3><b>" + dr[2].ToString() + "</b></h3>" +
                                 "<p>" + dr[3].ToString() + "</p>" +
                                 "<div class=\"btns_my_posts\">" +
-                                    "<button class=\"button button_card\">modifier</button>" +
-                                    "<button class=\"button button_card danger\">supprimer</button>" +
+                                    "<button id=\"" + dr[0].ToString() + 
+                                         "\" class=\"button button_card\">modifier</button>" +
+                                    "<button id=\"" + dr[0].ToString() + 
+                                         "\" class=\"button button_card danger\">supprimer</button>" +
                                 "</div>" +
                               "</div>";
                 my_post.InnerHtml += card;
@@ -54,11 +56,12 @@ namespace find_your_road
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                String card = "<div id=\"" + dr[0].ToString() + "\" class=\"card\">" +
+                String card = "<div class=\"card\">" +
                               "<h3><b>" + dr[2].ToString() + "</b></h3>" +
                               "<p class=\"p\">" + dr[3].ToString() + "</p>" +
                                 "<div class=\"btns_my_posts\">" +
-                                    "<button class=\"button button_card\">voir le post</button>" +
+                                    "<button id=\"" + dr[0].ToString() + 
+                                    "\"  class=\"post_details button button_card\">voir le post</button>" +
                                 "</div>" +
                               "</div>";
                 post_I_liked.InnerHtml += card;
@@ -68,6 +71,7 @@ namespace find_your_road
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (!IsPostBack)
             {
                 if (Session["User"] == null)
@@ -216,6 +220,14 @@ namespace find_your_road
 
         //    //Display the Picture in Image control.
         //    User_Avatar.ImageUrl =  "~/Files/" + Path.GetFileName(FileUpload1.FileName);
+        }
+
+        [System.Web.Services.WebMethod]
+        public static string id_Session(string strpath)
+        {
+            Page objp = new Page();
+            objp.Session["Post_Id"] = strpath;
+            return strpath;
         }
     }
 }
