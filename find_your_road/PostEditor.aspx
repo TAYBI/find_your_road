@@ -23,7 +23,7 @@
           
     <a  class="home_link" href="Home.aspx">Home</a>
         
-    <h1 id="h1" style="">Post Editor</h1>
+    <h1 id="h1" style="" runat="server">Post Editor</h1>
     <div class="container no">
         <hr />
        <b>titre</b>  

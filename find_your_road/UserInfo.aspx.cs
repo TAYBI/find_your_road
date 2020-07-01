@@ -36,7 +36,7 @@ namespace find_your_road
                                 "<p>" + dr[3].ToString() + "</p>" +
                                 "<div class=\"btns_my_posts\">" +
                                     "<button id=\"" + dr[0].ToString() + 
-                                         "\" class=\"button button_card\">modifier</button>" +
+                                         "\" class=\"modifier_post button button_card\">modifier</button>" +
                                     "<button id=\"" + dr[0].ToString() + 
                                          "\" class=\"button button_card danger\">supprimer</button>" +
                                 "</div>" +
@@ -227,6 +227,14 @@ namespace find_your_road
         {
             Page objp = new Page();
             objp.Session["Post_Id"] = strpath;
+            return strpath;
+        }
+
+        [System.Web.Services.WebMethod]
+        public static string edit_post(string strpath)
+        {
+            Page objp = new Page();
+            objp.Session["Edit_Post_Id"] = strpath;
             return strpath;
         }
     }

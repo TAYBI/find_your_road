@@ -55,7 +55,6 @@ namespace find_your_road
             con.Close(); 
         }
 
-
         [System.Web.Services.WebMethod]
         public static string id_Session(string strpath)
         {

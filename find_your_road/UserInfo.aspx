@@ -133,6 +133,7 @@
         var bio_asp = document.getElementById("<%=bio_asp_value.ClientID%>");
         var change_profile = document.getElementById('change_profile');
         var btns = document.querySelectorAll('.post_details');
+        var btns_modifier = document.querySelectorAll('.modifier_post');
 
         bio.addEventListener('keyup', function (e) {
             bio_asp.value = bio.value;
@@ -149,14 +150,26 @@
             btns[i].addEventListener('click', clicked);
         }
 
+        for (var i = 0; i < btns_modifier.length; i++) {
+            btns_modifier[i].addEventListener('click', modifier);
+        }
+
         function clicked(e) {
             e.preventDefault();
             var id = e.target.id;
             PageMethods.id_Session(id);
-            //
-            console.log(e.target.id);
+            ////
+            //console.log(e.target.id);
             location.href = "PostInfo.aspx";
             console.log(id);
+        }
+
+        function modifier(e) {
+            e.preventDefault();
+            var id = e.target.id;
+            PageMethods.edit_post(id);
+            location.href = "PostEditor.aspx";
+            //console.log(id);
         }
     </script>
 </form>
