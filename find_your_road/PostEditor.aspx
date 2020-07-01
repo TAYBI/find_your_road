@@ -78,7 +78,7 @@
 
         simplemde.codemirror.on("change", function () {
             //console.log(simplemde.value());
-            postDetails.value = Server.HtmlEncode(md.render(simplemde.value()));
+            postDetails.value = `${md.render(simplemde.value())}`;
             console.log(postDetails.value)
         });
 

@@ -29,6 +29,8 @@ namespace find_your_road
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
             {
+                h1.InnerText = dr[2].ToString();
+                h3.InnerText = dr[3].ToString();
                 Label1.Text = dr[4].ToString();
             }
             else

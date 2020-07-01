@@ -31,6 +31,24 @@ namespace find_your_road {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl container;
         
         /// <summary>
+        /// h1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl h1;
+        
+        /// <summary>
+        /// h3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl h3;
+        
+        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>

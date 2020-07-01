@@ -4,9 +4,21 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    <link rel="stylesheet" href="css/main.css" />
+    <title></title>    
     <style>
+        html {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .container {
+          max-width: 1024px;
+          margin: 0 auto;
+        }
+
+        .box {
+          height: 8rem;
+        }
+
         .home_link {
             text-decoration: none;
             padding: 0.75rem 1.5rem;
@@ -38,8 +50,15 @@
     <div class="box"></div>
     <a  class="home_link" href="Home.aspx">Home</a>
     <div class="container" id="container" runat="server">
-        <h1>post info</h1>
+        <center>
+        <h1 id="h1" style="font-size: 2.5rem;" runat="server"></h1>
+        <h3 id="h3" runat="server"></h3>
+        </center>
+        <hr />
+        <br />
         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        <br />
+        <hr />
     </div>
     <div class="box"></div>
     </form>
