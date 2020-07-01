@@ -20,24 +20,41 @@ namespace find_your_road
         {
             if (Session["User"] == null)
                 Response.Redirect("Sign In.aspx");
+            get_Types();
         }
 
+        public void get_Types()
+        {
+            int selectId = Post_Type.SelectedIndex;
+            Post_Type.Items.Clear();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT DISTINCT Type_ FROM Post", con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                Post_Type.Items.Add(dr[0].ToString());
+            }
+            con.Close();
+
+            Post_Type.SelectedIndex = selectId;
+        }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
                     
             String user_Id = (String)Session["User_Id"];
             String post_Id = Membership.GeneratePassword(12, 1).ToString();
-            String postTitle = Post_Title.Text;
-            String postDis = Post_Dis.Value;
+            String postTitle = Post_Title.Text.Replace('\'','’');
+            String postDis = Post_Dis.Value.Replace('\'', '’');
             String postDetails = post_Details.Value.ToString();
             String postType = Post_Type.Text;
-            
+            String req = "insert into Post values ('" +
+                                            post_Id + "', '" + user_Id + "', '" +
+                                            postTitle + "', '" + postDis + "', '" +
+                                            postDetails + "', '" + postType + "', 0)";
+
             con.Open();
-            SqlCommand cmd = new SqlCommand("insert into Post values ('"+
-                                            post_Id+"', '"+user_Id+"', '"+
-                                            postTitle +"', '"+ postDis +"', '"+
-                                            postDetails+"', '"+postType+"', 0)", con);
+            SqlCommand cmd = new SqlCommand(req, con);
             cmd.ExecuteNonQuery();
             con.Close();
             

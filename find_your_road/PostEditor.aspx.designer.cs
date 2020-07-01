@@ -46,7 +46,7 @@ namespace find_your_road {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Post_Type;
+        protected global::System.Web.UI.WebControls.DropDownList Post_Type;
         
         /// <summary>
         /// Button1 control.

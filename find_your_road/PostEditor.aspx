@@ -7,6 +7,15 @@
     <title></title>
      <link rel="stylesheet" href="css/simplemd.min.css" />
      <link rel="stylesheet" href="css/edit_post.css" />
+     <style>
+        .select {
+            border: 1px solid #333;
+            margin-left: 0.4rem;
+            border-radius: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            padding: 0.5rem 1rem;
+        }
+     </style>
 </head>
 <body>
     <form id="form1" runat="server">  
@@ -31,10 +40,9 @@
        </div>
         <br />
         <b>type</b>  
-       <div class="field name_field">
-            <asp:TextBox ID="Post_Type" type="text" name="email" class="input" 
-                placeholder="Type de post" runat="server" required></asp:TextBox>
-       </div>
+        <asp:DropDownList ID="Post_Type" class="select" runat="server" required></asp:DropDownList>
+        <br />
+        <br />
         <br />
         <i>markdown editor</i>
       <textarea name="" id="markdown"></textarea>
@@ -78,7 +86,7 @@
 
         simplemde.codemirror.on("change", function () {
             //console.log(simplemde.value());
-            postDetails.value = `${md.render(simplemde.value())}`;
+            postDetails.value = `${md.render(simplemde.value()).replace(/'/g, "’")}`;
             console.log(postDetails.value)
         });
 
