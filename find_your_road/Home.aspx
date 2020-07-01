@@ -38,6 +38,14 @@
             opacity: 0.1;
             height: 0.1px;
         }
+        
+        .select {
+            border: 1px solid #333;
+            margin-left: 0.4rem;
+            border-radius: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            padding: 0.5rem 1rem;
+        }
     </style>
 </head>
 <body class="dropbtn">

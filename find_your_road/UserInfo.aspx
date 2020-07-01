@@ -85,12 +85,12 @@
             <asp:Button class="button danger" ID="Button3" runat="server" Text="supprimer mon compte" />
       </div>
     </div>
-
-    <div id="my_posts" class="tabcontent">
+ <div id="my_posts" class="tabcontent">
     <div class="box"></div>
         <div class="container">
           <div class="filter">
-<%--        <select name="option" id="option">
+  <%--          <label for="cars">Choose a type:</label>
+            <select name="option" id="option">
               <option value="web">web</option>
               <option value="design">design</option>
               <option value="server side">server side</option>
@@ -102,11 +102,12 @@
       </div>
     </div>
 
-    <div id="posts_I_liked"  class="tabcontent">
+    <div id="posts_I_Liked" class="tabcontent">
       <div class="box"></div>
         <div class="container">
           <div class="filter">
-<%--        <select name="option" id="Select1">
+  <%--          <label for="cars">Choose a type:</label>
+            <select name="option" id="Select1">
               <option value="web">web</option>
               <option value="design">design</option>
               <option value="server side">server side</option>
