@@ -102,7 +102,7 @@
       </div>
     </div>
 
-    <div  class="tabcontent">
+    <div id="posts_I_liked"  class="tabcontent">
       <div class="box"></div>
         <div class="container">
           <div class="filter">

@@ -75,7 +75,7 @@ namespace find_your_road
                     bio = user.getBio();
                     bio_asp_value.Value = user.getBio();
 
-                    get_my_post();
+                    //get_my_post();
                     get_post_I_liked();
                 }
                 if((String)Session["User_id"] != null)
