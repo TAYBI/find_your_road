@@ -18,8 +18,11 @@ namespace find_your_road
         User user;
         String bio;
         String user_id;
-        SqlConnection con = new SqlConnection("Data Source=Bilal-PC;Initial "+
+        public static SqlConnection con = new SqlConnection("Data Source=Bilal-PC;Initial " +
                                               "Catalog=db;Integrated Security=True");
+
+        public static SqlConnection con2 = new SqlConnection("Data Source=Bilal-PC;Initial " +
+                                          "Catalog=db;Integrated Security=True");
         //String imageLoc = "";
 
         public void get_my_post()
@@ -36,9 +39,9 @@ namespace find_your_road
                                 "<p>" + dr[3].ToString() + "</p>" +
                                 "<div class=\"btns_my_posts\">" +
                                     "<button id=\"" + dr[0].ToString() + 
-                                         "\" class=\"modifier_post button button_card\">modifier</button>" +
+                          "\" class=\"modifier_post button button_card\">modifier</button>" +
                                     "<button id=\"" + dr[0].ToString() + 
-                                         "\" class=\"button button_card danger\">supprimer</button>" +
+                          "\" class=\"supprimer_post button button_card danger\">supprimer</button>" +
                                 "</div>" +
                               "</div>";
                 my_post.InnerHtml += card;
@@ -61,7 +64,7 @@ namespace find_your_road
                               "<p class=\"p\">" + dr[3].ToString() + "</p>" +
                                 "<div class=\"btns_my_posts\">" +
                                     "<button id=\"" + dr[0].ToString() + 
-                                    "\"  class=\"post_details button button_card\">voir le post</button>" +
+                              "\"  class=\"post_details button button_card\">voir le post</button>" +
                                 "</div>" +
                               "</div>";
                 post_I_liked.InnerHtml += card;
@@ -236,6 +239,19 @@ namespace find_your_road
             Page objp = new Page();
             objp.Session["Edit_Post_Id"] = strpath;
             return strpath;
+        }
+
+        [System.Web.Services.WebMethod]
+        public static void delete_post(string strpath)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("DELETE FROM Post WHERE PostId = '"+strpath+"'", con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            //Page objp = new Page();
+            //objp.Session["Edit_Post_Id"] = strpath;
+            //return strpath;
         }
     }
 }

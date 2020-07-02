@@ -27,7 +27,7 @@
             <asp:ImageButton ID="User_Avatar" ImageUrl="~/imgs/avatar.jpg" 
                 runat="server" Height="150px" Width="150px" />
             <%--<asp:FileUpload ID="FileUpload1" runat="server" />--%>
-<%--            <asp:Button ID="Button2" runat="server" Text="Button" onclick="Button2_Click" />--%>
+            <%--<asp:Button ID="Button2" runat="server" Text="Button" onclick="Button2_Click" />--%>
           </div>
           <div class="user_personel_info">
            <asp:Label ID="User_name" class="user_name" runat="server" Text="Lorem, ipsum"></asp:Label>
@@ -89,12 +89,12 @@
     <div class="box"></div>
         <div class="container">
           <div class="filter">
-  <%--          <label for="cars">Choose a type:</label>
-            <select name="option" id="option">
-              <option value="web">web</option>
-              <option value="design">design</option>
-              <option value="server side">server side</option>
-              <option value="mobile">mobile</option>
+       <%--<label for="cars">Choose a type:</label>
+             <select name="option" id="option">
+             <option value="web">web</option>
+             <option value="design">design</option>
+             <option value="server side">server side</option>
+             <option value="mobile">mobile</option>
             </select>--%>
            </div>
         <div class="grid" id="my_post" runat="server">
@@ -106,7 +106,7 @@
       <div class="box"></div>
         <div class="container">
           <div class="filter">
-  <%--          <label for="cars">Choose a type:</label>
+  <%--    <label for="cars">Choose a type:</label>
             <select name="option" id="Select1">
               <option value="web">web</option>
               <option value="design">design</option>
@@ -134,6 +134,7 @@
         var change_profile = document.getElementById('change_profile');
         var btns = document.querySelectorAll('.post_details');
         var btns_modifier = document.querySelectorAll('.modifier_post');
+        var btns_supprimer = document.querySelectorAll('.supprimer_post');
 
         bio.addEventListener('keyup', function (e) {
             bio_asp.value = bio.value;
@@ -152,6 +153,7 @@
 
         for (var i = 0; i < btns_modifier.length; i++) {
             btns_modifier[i].addEventListener('click', modifier);
+            btns_supprimer[i].addEventListener('click', supprimer);
         }
 
         function clicked(e) {
@@ -170,6 +172,14 @@
             PageMethods.edit_post(id);
             location.href = "PostEditor.aspx";
             //console.log(id);
+        }
+        
+        function supprimer(e) {
+            e.preventDefault();
+            var id = e.target.id;
+            PageMethods.delete_post(id);
+            location.href = "UserInfo.aspx";
+            console.log(id);
         }
     </script>
 </form>

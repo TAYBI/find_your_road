@@ -90,6 +90,13 @@
             console.log(postDetails.value)
         });
 
+        var editing = "<%= Editing %>";
+        if(editing == "edit"){
+            simplemde.value(`<%= PostDetails %>`);               
+        }
+
+        //window.onload = function () {
+        //};
         //btn.addEventListener("click", 
         //function Set_Post_detail(e) {
         //    e.preventDefault();

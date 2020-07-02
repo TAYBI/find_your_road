@@ -14,6 +14,8 @@ namespace find_your_road
 {
     public partial class PostEditor : System.Web.UI.Page
     {
+        String postDetails;
+        String edit;
         SqlConnection con = new SqlConnection("Data Source=Bilal-PC;Initial " +
                                               "Catalog=db;Integrated Security=True");
 
@@ -32,7 +34,9 @@ namespace find_your_road
                 {
                     Post_Title.Text = dr[2].ToString();
                     Post_Dis.Value = dr[3].ToString();
+                    postDetails = dr[4].ToString();
                     Post_Type.Text = dr[5].ToString();
+                    edit = "edit";
                 }
                 con.Close();
             }
@@ -45,6 +49,10 @@ namespace find_your_road
                 Page.Title = "Editeur de post | " + user.getName();
             }
         }
+
+        protected string Editing { get { return edit; } }
+        
+        protected string PostDetails { get { return postDetails; } }
 
         public void get_Types()
         {
@@ -71,16 +79,18 @@ namespace find_your_road
             String postDis = Post_Dis.Value.Replace('\'', '’');
             String postDetails = post_Details.Value.ToString();
             String postType = Post_Type.Text;
- 
-            if(Session["Edit_Post_Id"] != null)
-                req = "update Post set Title = '" + postTitle + "', Short_Info = '" + postDis + 
-                                   "', Details = '" + postDetails + "', Type_ '" + postType + 
-                                   "'  WHERE PostId = '"+ post_Id +"' AND UserId = '"+user_Id+"'";
-            else
+
+            if (Session["Edit_Post_Id"] != null) {
+                req = "update Post set Title = '" + postTitle + "', Short_Info = '" + postDis +
+                                   "', Details = '" + postDetails + "', Type_ '" + postType +
+                                   "'  WHERE PostId = '" + (String)Session["Edit_Post_Id"] +
+                                   "' AND UserId = '" + user_Id + "'";
+            } else {
                 req = "insert into Post values ('" +
                                             post_Id + "', '" + user_Id + "', '" +
                                             postTitle + "', '" + postDis + "', '" +
                                             postDetails + "', '" + postType + "', 0)";
+            }
 
             con.Open();
             SqlCommand cmd = new SqlCommand(req, con);
