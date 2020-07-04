@@ -82,7 +82,8 @@
             <asp:Button class="button" ID="Button1" runat="server" 
                     OnClick="change_mdps_Click"  Text="mettre à jour le mot de passe" />
         <h2><br />Zone dangereuse</h2>
-            <asp:Button class="button danger" ID="Button3" runat="server" Text="supprimer mon compte" />
+            <asp:Button class="button danger" OnClick="Delete_Acount" 
+                        ID="Button3" runat="server" Text="supprimer mon compte" />
       </div>
     </div>
  <div id="my_posts" class="tabcontent">

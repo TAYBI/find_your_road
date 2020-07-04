@@ -18,10 +18,10 @@ namespace find_your_road
         User user;
         String bio;
         String user_id;
-        public static SqlConnection con = new SqlConnection("Data Source=Bilal-PC;Initial " +
+        SqlConnection con = new SqlConnection("Data Source=Bilal-PC;Initial " +
                                               "Catalog=db;Integrated Security=True");
 
-        public static SqlConnection con2 = new SqlConnection("Data Source=Bilal-PC;Initial " +
+        public static SqlConnection con3 = new SqlConnection("Data Source=Bilal-PC;Initial " +
                                           "Catalog=db;Integrated Security=True");
         //String imageLoc = "";
 
@@ -74,7 +74,6 @@ namespace find_your_road
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (!IsPostBack)
             {
                 if (Session["User"] == null)
@@ -107,7 +106,6 @@ namespace find_your_road
             user_id = (String)Session["User_id"];
             
             con.Open();
-
             SqlCommand cmd2 = new SqlCommand("UPDATE User_ SET Name ='" + name + "', Bio = '" + bio_
                 + "' WHERE UserId ='" + user_id + "'", con);
             cmd2.ExecuteNonQuery();
@@ -243,15 +241,22 @@ namespace find_your_road
 
         [System.Web.Services.WebMethod]
         public static void delete_post(string strpath)
+        {  
+            SqlConnection con2 = new SqlConnection("Data Source=Bilal-PC;Initial " +
+                                          "Catalog=db;Integrated Security=True");
+            con2.Open();
+            SqlCommand cmd = new SqlCommand("DELETE FROM Post WHERE PostId = '"+strpath+"'", con2);
+            cmd.ExecuteNonQuery();
+            con2.Close();
+        }
+
+        protected void Delete_Acount(object sender, EventArgs e)
         {
+            user_id = (String)Session["User_id"];
             con.Open();
-            SqlCommand cmd = new SqlCommand("DELETE FROM Post WHERE PostId = '"+strpath+"'", con);
+            SqlCommand cmd = new SqlCommand("Delete from User_ Where UserId = '" +user_id+"'", con);
             cmd.ExecuteNonQuery();
             con.Close();
-
-            //Page objp = new Page();
-            //objp.Session["Edit_Post_Id"] = strpath;
-            //return strpath;
         }
     }
 }
