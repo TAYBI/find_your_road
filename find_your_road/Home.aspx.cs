@@ -65,8 +65,8 @@ namespace find_your_road
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (!IsPostBack)
-            //{
+            if (!IsPostBack)
+            {
                 if (Session["User"] == null)
                     Response.Redirect("Sign In.aspx");
                 else
@@ -75,8 +75,9 @@ namespace find_your_road
                     Page.Title = "Home | " + user.getName();
                     get_Types();
                     get_posts();
+                    avatar_user.Src = user.getAvatar();
                 }
-            //}
+            }
         }
 
         protected void Select_SelectedIndexChanged(object sender, EventArgs e)

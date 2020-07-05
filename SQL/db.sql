@@ -34,3 +34,8 @@ select * FROM Post WHERE UserId = '87a4a205-f8c9-4dc9-9bd0-5be14c87a6a7'
 DELETE FROM User_ WHERE UserId = '87a4a205-f8c9-4dc9-9bd0-5be14c87a6a7'
 
 DELETE FROM User_ WHERE UserId = 'b412f47b-106d-4316-97b4-cb603515b94a'
+
+update Post set Title = 'ok', Short_Info = 'ok', Details = 'ok', Type_ = 'ok' 
+WHERE PostId = '3a5f38ac-9eeb-4960-a074-e6fa2dc82990' AND UserId = 'c4eba8e7-99e6-424e-b134-db9415086ea4'
+
+SELECT * FROM Post

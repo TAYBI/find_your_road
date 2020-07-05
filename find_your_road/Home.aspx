@@ -54,7 +54,7 @@
     <nav>
       <a href="PostEditor.aspx" class="new_post">+ new post</a>
       <div class="dropdown">
-        <img src="imgs/avatar.jpg" alt="avatar" width="55" height="55" class="dropbtn img" />
+        <img id="avatar_user" alt="avatar" width="55" height="55" class="dropbtn img" runat="server"/>
         <div class="dropdown-content">
           <a href="UserInfo.aspx">profile</a>
           <a href="PostEditor.aspx">+ new post</a>

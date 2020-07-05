@@ -24,10 +24,13 @@
       <div class="container">
         <div class="user_info">
           <div class="avatar">
-            <asp:ImageButton ID="User_Avatar" ImageUrl="~/imgs/avatar.jpg" 
+            <asp:ImageButton ID="User_Avatar"
                 runat="server" Height="150px" Width="150px" />
-            <%--<asp:FileUpload ID="FileUpload1" runat="server" />--%>
-            <%--<asp:Button ID="Button2" runat="server" Text="Button" onclick="Button2_Click" />--%>
+            <asp:FileUpload ID="FileUpload1" runat="server" />
+            <asp:Label ID="err" ForeColor="Red" Font-Size="XX-Small" runat="server"></asp:Label>
+            <asp:Label ID="scc" ForeColor="Green" Font-Size="XX-Small" runat="server"></asp:Label>
+            <asp:Button ID="Button2" runat="server" Text="changer l'image" 
+                        Width="150px" onclick="Button2_Click" />
           </div>
           <div class="user_personel_info">
            <asp:Label ID="User_name" class="user_name" runat="server" Text="Lorem, ipsum"></asp:Label>

@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.IO;
 using System.Configuration;
+using System.Web.Security;
 
 namespace find_your_road
 {
@@ -61,6 +62,7 @@ namespace find_your_road
                     User_bio.Text = user.getBio();
                     bio = user.getBio();
                     bio_asp_value.Value = user.getBio();
+                    User_Avatar.ImageUrl = user.getAvatar();
 
                     get_my_post();
                 }
@@ -113,87 +115,41 @@ namespace find_your_road
             }
         }
 
-        protected void User_Avatar_Click(object sender, ImageClickEventArgs e)
+        protected void Button2_Click(object sender, EventArgs e)
         {
-            //string folderPath = Server.MapPath("~/Desktop/");
+            String id = (String)Session["User_id"] ;
+            String path = Server.MapPath(FileUpload1.FileName);
+            if (path != null)
+            {
+                string strpath = Path.GetExtension(FileUpload1.FileName);
+                if (strpath != ".jpeg" && strpath != ".jpg" && strpath != ".png" && strpath != ".gif")
+                    err.Text = "seulement les images (jpeg, jpg, png, gif) !";
 
-            //Check whether Directory (Folder) exists.
-            //if (!Directory.Exists(folderPath))
-            //{
-            //    //If Directory (Folder) does not exists Create it.
-            //    Directory.CreateDirectory(folderPath);
-            //}
+                string fileimage = Path.GetFileName(FileUpload1.PostedFile.FileName);
+                string random = Membership.GeneratePassword(12, 1).ToString();
+                //fileimage += random + strpath;
+                try
+                {
+                    FileUpload1.SaveAs(Server.MapPath("~/imgs/") + fileimage);
+                }
+                catch (Exception m)
+                {
+                    err.Text = "échec du téléchargement de l'image !";
+                    return;
+                }
 
-            ////Save the File to the Directory (Folder).
-            //FileUpload1.SaveAs(folderPath + Path.GetFileName(FileUpload1.FileName));
 
-            ////Display the Picture in Image control.
-            //User_Avatar.ImageUrl = Path.GetFileName(FileUpload1.FileName);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("UPDATE User_ SET Avatar = '~/imgs/" + fileimage + "'"
+                                                + " WHERE UserId = '" + id + "'", con);
+                cmd.ExecuteNonQuery();
+                con.Close();
 
-            //try
-            //{
-            //    FileUpload dtg = new FileUpload();
-            //    dtg.tit
-            // //   OpenFile
-            //}
-            //catch (Exception m)
-            //{
-            //}
-            //user = (User)Session["User"];
-            //con.Open();
-            //SqlCommand cmd = new SqlCommand("SELECT * FROM User_ WHERE UserId = '" +
-            //                                   user_id + "'", con);
-            //SqlDataReader dr = cmd.ExecuteReader();
-            //if (dr.Read())
-            //{
-            //    Page.Title = "Profile | " + dr[1].ToString();
-            //    User_name.Text = dr[1].ToString();
-            //    Input_Name.Text = dr[1].ToString();
-            //    User_bio.Text = dr[4].ToString();
-            //    bio = dr[4].ToString();
-            //}
-            //con.Close();
-        }
-
-        protected void uploadFile_Click(object sender, EventArgs e)
-        {
-            //String id = (String)Session["User_id"] ;
-
-            //if(FileUpload1.PostedFile != null)
-            //{
-            //    string strpath = Path.GetExtension(FileUpload1.FileName);
-            //    if (strpath != ".jpeg" && strpath != ".jpg" && strpath != ".png" && strpath != ".gif")
-            //    {
-            //        // TODO
-            //        // display msg EROR
-            //    }
-
-            //    string fileimage = Path.GetFileName(FileUpload1.PostedFile.FileName);
-            //    FileUpload1.SaveAs(Server.MapPath("~/imgs/") + fileimage);
-
-            //    con.Open();
-            //    SqlCommand cmd = new SqlCommand("UPDATE User_ SET  Avatar = '~/imgs/"+ fileimage +"'"
-            //                                    + " WHERE UserId = '" + id+ "'", con);
-            //    cmd.ExecuteNonQuery();
-            //    con.Close();
-
-            //    User_Avatar.ImageUrl = "~/imgs/" + fileimage;
-            //}
-
-        //    string folderPath = Server.MapPath("~/Files/");
-
-        //    //Check whether Directory (Folder) exists.
-        //    if (!Directory.Exists(folderPath))
-        //    {
-        //        //If Directory (Folder) does not exists Create it.
-        //        Directory.CreateDirectory(folderPath);
-        //    }
-
-        //    //Save the File to the Directory (Folder).
-        //    FileUpload1.SaveAs(folderPath + Path.GetFileName(FileUpload1.FileName));
-
-        //    //Display the Picture in Image control.
-        //    User_Avatar.ImageUrl =  "~/Files/" + Path.GetFileName(FileUpload1.FileName);
+                User_Avatar.ImageUrl = "~/imgs/" + fileimage;
+                scc.Text = "reconnectez-vous à nouveau pour confirmer les modifications";
+            }
+            else
+                err.Text = "échec du téléchargement de l'image !";
         }
 
         [System.Web.Services.WebMethod]
