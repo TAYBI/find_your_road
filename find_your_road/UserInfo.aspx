@@ -81,25 +81,19 @@
         <h2><br />Zone dangereuse</h2>
             <asp:Button class="button danger" OnClick="Delete_Acount" 
                         ID="Button3" runat="server" Text="supprimer mon compte" />
+            <br/>
+          <asp:Label ForeColor="Red" Font-Size="XX-Small" runat="server">* Vous ne pouvez pas restaurer vos données</asp:Label>
       </div>
     </div>
  <div id="my_posts" class="tabcontent">
     <div class="box"></div>
         <div class="container">
           <div class="filter">
-       <%--<label for="cars">Choose a type:</label>
-             <select name="option" id="option">
-             <option value="web">web</option>
-             <option value="design">design</option>
-             <option value="server side">server side</option>
-             <option value="mobile">mobile</option>
-            </select>--%>
-           </div>
+        </div>
         <div class="grid" id="my_post" runat="server">
         </div>
       </div>
     </div>
-    <button ></button>
 
     
     <%-- ***************************************** --%>
@@ -141,6 +135,7 @@
             e.preventDefault();
             var id = e.target.id;
             PageMethods.edit_post(id);
+            //localStorage.setItem("edditing_id", id);
             location.href = "PostEditor.aspx";
             console.log(id);
         }
@@ -150,11 +145,12 @@
             var id = e.target.id;
             try{
                 PageMethods.delete_post(id);
-                location.reload(); 
-                console.log(id);
             }
             catch(es){
                 console.log('No');
+            }
+            finally{
+                location.href = "UserInfo.aspx";
             }
         }
     </script>

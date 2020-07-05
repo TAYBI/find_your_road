@@ -82,7 +82,7 @@ namespace find_your_road
 
             if (Session["Edit_Post_Id"] != null) {
                 req = "update Post set Title = '" + postTitle + "', Short_Info = '" + postDis +
-                                   "', Details = '" + postDetails + "', Type_ '" + postType +
+                                   "', Details = '" + postDetails + "', Type_ = '" + postType +
                                    "'  WHERE PostId = '" + (String)Session["Edit_Post_Id"] +
                                    "' AND UserId = '" + user_Id + "'";
             } else {

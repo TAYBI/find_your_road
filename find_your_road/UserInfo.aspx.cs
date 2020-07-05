@@ -231,6 +231,7 @@ namespace find_your_road
             SqlCommand cmd = new SqlCommand("Delete from User_ Where UserId = '" +user_id+"'", con);
             cmd.ExecuteNonQuery();
             con.Close();
+            Response.Redirect("Sign In.aspx");
         }
     }
 }

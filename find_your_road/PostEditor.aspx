@@ -70,6 +70,7 @@
         
         
     <asp:HiddenField runat="server" ID="post_Details" Value="" />
+    <%--<asp:HiddenField runat="server" ID="editing_id" Value="" />--%>
     <div class="box"></div>
     </form>
     <script src="js/simplemd.min.js"></script>
@@ -79,21 +80,27 @@
             html: false, // Enable HTML tags in source            xhtmlOut: false, // Use '/' to close single tags (<br />)            breaks: false, // Convert '\n' in paragraphs into <br>            linkify: false, // Autoconvert URL-like text to links            // Enable some language-neutral replacement + quotes beautification            typographer: false,            // Double + single quotes replacement pairs, when typographer enabled,            // and smartquotes on. Set doubles to '«»' for Russian, '„“' for German.            quotes: "“”‘’",
         });
 
+        
+
         var simplemde = new SimpleMDE({ element: document.getElementById("markdown") });
 
         var btn = document.querySelector("#Button2");
         var postDetails = document.querySelector("#post_Details");
+        var editing_id = document.querySelector("#editing_id");
+
+        //editing_id.value = localStorage.getItem("edditing_id"); 
 
         simplemde.codemirror.on("change", function () {
             //console.log(simplemde.value());
             postDetails.value = `${md.render(simplemde.value()).replace(/'/g, "’")}`;
             console.log(postDetails.value)
         });
-
-        var editing = "<%= Editing %>";
+        
+        /*
+        var editing = "<= Editing %>";
         if(editing == "edit"){
-            simplemde.value(`<%= PostDetails %>`);               
-        }
+            simplemde.value(\<= PostDetails %>`);               
+        }*/
 
         //window.onload = function () {
         //};

@@ -26,6 +26,9 @@ SET ANSI_NULLS ON;
 
 /*Delete post*/
 DELETE FROM Post WHERE PostId = '53df51b4-d3e4-4a63-9315-298c21e5e014'
+DELETE FROM Post WHERE UserId = '2a0f6cbf-e114-4c16-aa07-8b47affc5462'
+
+select * FROM Post WHERE UserId = '87a4a205-f8c9-4dc9-9bd0-5be14c87a6a7'
 
 /*Delete user*/
 DELETE FROM User_ WHERE UserId = '87a4a205-f8c9-4dc9-9bd0-5be14c87a6a7'
