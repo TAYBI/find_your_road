@@ -18,11 +18,8 @@ namespace find_your_road
         User user;
         String bio;
         String user_id;
-        SqlConnection con = new SqlConnection("Data Source=Bilal-PC;Initial " +
+        public static SqlConnection con = new SqlConnection("Data Source=Bilal-PC;Initial " +
                                               "Catalog=db;Integrated Security=True");
-
-        public static SqlConnection con3 = new SqlConnection("Data Source=Bilal-PC;Initial " +
-                                          "Catalog=db;Integrated Security=True");
         //String imageLoc = "";
 
         public void get_my_post()
@@ -39,35 +36,12 @@ namespace find_your_road
                                 "<p>" + dr[3].ToString() + "</p>" +
                                 "<div class=\"btns_my_posts\">" +
                                     "<button id=\"" + dr[0].ToString() + 
-                          "\" class=\"modifier_post button button_card\">modifier</button>" +
+       "\" class=\"modifier_post button button_card\" runat=\"server\">modifier</button>" +
                                     "<button id=\"" + dr[0].ToString() + 
-                          "\" class=\"supprimer_post button button_card danger\">supprimer</button>" +
+       "\" class=\"supprimer_post button button_card danger\" runat=\"server\">supprimer</button>" +
                                 "</div>" +
                               "</div>";
                 my_post.InnerHtml += card;
-            }
-            con.Close();
-        }
-
-        public void get_post_I_liked()
-        {
-            con.Open();
-            post_I_liked.InnerHtml = "";
-            user_id = (String)Session["User_id"];
-            SqlCommand cmd = new SqlCommand("SELECT P.*  FROM Post P,"+
-                " Post_Liked PL WHERE P.PostId = PL.PostId and PL.UserId = '"+user_id+"'", con);
-            SqlDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                String card = "<div class=\"card\">" +
-                              "<h3><b>" + dr[2].ToString() + "</b></h3>" +
-                              "<p class=\"p\">" + dr[3].ToString() + "</p>" +
-                                "<div class=\"btns_my_posts\">" +
-                                    "<button id=\"" + dr[0].ToString() + 
-                              "\"  class=\"post_details button button_card\">voir le post</button>" +
-                                "</div>" +
-                              "</div>";
-                post_I_liked.InnerHtml += card;
             }
             con.Close();
         }
@@ -89,7 +63,6 @@ namespace find_your_road
                     bio_asp_value.Value = user.getBio();
 
                     get_my_post();
-                    get_post_I_liked();
                 }
                 if((String)Session["User_id"] != null)
                     user_id = (String)Session["User_id"];
@@ -240,7 +213,7 @@ namespace find_your_road
         }
 
         [System.Web.Services.WebMethod]
-        public static void delete_post(string strpath)
+        public static string delete_post(string strpath)
         {  
             SqlConnection con2 = new SqlConnection("Data Source=Bilal-PC;Initial " +
                                           "Catalog=db;Integrated Security=True");
@@ -248,6 +221,7 @@ namespace find_your_road
             SqlCommand cmd = new SqlCommand("DELETE FROM Post WHERE PostId = '"+strpath+"'", con2);
             cmd.ExecuteNonQuery();
             con2.Close();
+            return strpath;
         }
 
         protected void Delete_Acount(object sender, EventArgs e)

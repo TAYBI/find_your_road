@@ -44,9 +44,6 @@
         <button class="tablinks" onclick="openCity(event, 'my_posts')">
           My posts
         </button>
-        <button class="tablinks" onclick="openCity(event, 'posts_I_Liked')">
-          Posts I Liked
-        </button>
       </div>
     </div>
 
@@ -102,23 +99,8 @@
         </div>
       </div>
     </div>
+    <button ></button>
 
-    <div id="posts_I_Liked" class="tabcontent">
-      <div class="box"></div>
-        <div class="container">
-          <div class="filter">
-  <%--    <label for="cars">Choose a type:</label>
-            <select name="option" id="Select1">
-              <option value="web">web</option>
-              <option value="design">design</option>
-              <option value="server side">server side</option>
-              <option value="mobile">mobile</option>
-            </select>--%>
-           </div>
-        <div class="grid" id="post_I_liked" runat="server">
-        </div>
-      </div>
-    </div>
     
     <%-- ***************************************** --%>
         <asp:ScriptManager EnablePageMethods="true" 
@@ -133,7 +115,6 @@
         var bio = document.getElementById('Input_bio');
         var bio_asp = document.getElementById("<%=bio_asp_value.ClientID%>");
         var change_profile = document.getElementById('change_profile');
-        var btns = document.querySelectorAll('.post_details');
         var btns_modifier = document.querySelectorAll('.modifier_post');
         var btns_supprimer = document.querySelectorAll('.supprimer_post');
 
@@ -148,23 +129,12 @@
             bio.value = `<%= User_Bio_Input %>`;            
         };
 
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener('click', clicked);
-        }
-
         for (var i = 0; i < btns_modifier.length; i++) {
             btns_modifier[i].addEventListener('click', modifier);
-            btns_supprimer[i].addEventListener('click', supprimer);
         }
-
-        function clicked(e) {
-            e.preventDefault();
-            var id = e.target.id;
-            PageMethods.id_Session(id);
-            ////
-            //console.log(e.target.id);
-            location.href = "PostInfo.aspx";
-            console.log(id);
+        
+        for (var i = 0; i < btns_supprimer.length; i++) {
+            btns_supprimer[i].addEventListener('click', supprimer);
         }
 
         function modifier(e) {
@@ -172,15 +142,20 @@
             var id = e.target.id;
             PageMethods.edit_post(id);
             location.href = "PostEditor.aspx";
-            //console.log(id);
+            console.log(id);
         }
         
         function supprimer(e) {
             e.preventDefault();
             var id = e.target.id;
-            PageMethods.delete_post(id);
-            location.href = "UserInfo.aspx";
-            console.log(id);
+            try{
+                PageMethods.delete_post(id);
+                location.reload(); 
+                console.log(id);
+            }
+            catch(es){
+                console.log('No');
+            }
         }
     </script>
 </form>
